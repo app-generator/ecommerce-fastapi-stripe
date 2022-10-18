@@ -1,5 +1,4 @@
-from fastapi import APIRouter, Request, Depends, status, Response, HTTPException
-from fastapi.responses import RedirectResponse
+from fastapi import APIRouter, Request, status
 from fastapi.responses import HTMLResponse
 from fastapi.templating import Jinja2Templates
 from pathlib import Path
