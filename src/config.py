@@ -1,7 +1,7 @@
 from pydantic import BaseSettings
 
 class Settings(BaseSettings):
-
+    debug: str
     secret_key: str
 
     class Config:
