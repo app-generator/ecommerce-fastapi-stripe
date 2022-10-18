@@ -1,0 +1,174 @@
+{% extends 'layouts/base.html' %}
+
+{% block title %} About US {% endblock title %}
+
+<!-- Specific CSS goes HERE -->
+{% block stylesheets %}{% endblock stylesheets %}
+
+{% block body_class %} about-us {% endblock body_class %}
+
+{% block content %}
+
+  {% include "includes/navigation-transparent.html" %}
+
+  <!-- End Navbar -->
+  <!-- -------- START HEADER 7 w/ text and video ------- -->
+  <header class="bg-gradient-dark">
+    <div class="page-header section-height-75" 
+         style="background-image: url('/static/products/{{ product.slug }}/cover.jpg');">
+      <span class="mask bg-gradient-info opacity-6">
+      </span>
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-lg-8 text-center mx-auto my-auto">
+            <h1 class="text-white">
+              {{ product.name }}
+            </h1>
+            <p class="lead mb-4 text-white opacity-8">
+              {{ product.info }}
+            </p>
+            
+            <!-- used to trigger the right product -->
+            <span style="display:none" id="product_slug">{{ product.slug }}</span>
+            
+
+            {% if config.STRIPE_IS_ACTIVE %}
+
+              <a id="submitBtn" href="#" class="btn bg-white text-dark">
+                Buy Product - ${{ product.price }}
+              </a>
+
+            {% else %}
+
+              <button type="button" class="btn bg-white text-dark" 
+                      data-bs-toggle="modal" 
+                      data-bs-target="#stripeModal">
+                Buy Product - ${{ product.price }}
+              </button>
+
+            {% endif %}
+
+            <h6 class="text-white mb-2 mt-5">
+              Chat with Support
+            </h6>
+            <div class="d-flex justify-content-center">
+              <a href="#">
+                <i class="fab fa-facebook text-lg text-white me-4"></i>
+              </a>
+              <a href="#">
+                <i class="fab fa-twitter text-lg text-white me-4"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="position-absolute w-100 z-index-1 bottom-0">
+        <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 40" preserveAspectRatio="none" shape-rendering="auto">
+          <defs>
+            <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+          </defs>
+          <g class="moving-waves">
+            <use xlink:href="#gentle-wave" x="48" y="-1" fill="rgba(255,255,255,0.40" />
+            <use xlink:href="#gentle-wave" x="48" y="3" fill="rgba(255,255,255,0.35)" />
+            <use xlink:href="#gentle-wave" x="48" y="5" fill="rgba(255,255,255,0.25)" />
+            <use xlink:href="#gentle-wave" x="48" y="8" fill="rgba(255,255,255,0.20)" />
+            <use xlink:href="#gentle-wave" x="48" y="13" fill="rgba(255,255,255,0.15)" />
+            <use xlink:href="#gentle-wave" x="48" y="16" fill="rgba(255,255,255,1" />
+          </g>
+        </svg>
+      </div>
+    </div>
+  </header>
+  <!-- -------- END HEADER 7 w/ text and video ------- -->
+  <!-- Section with four info areas left & one card right with image and waves -->
+  <section class="py-7">
+    <div class="container">
+      <div class="row align-items-center">
+      
+        <div class="col-lg-6">
+          <div class="row justify-content-left">
+
+            <div class="col-md-12">
+            
+              <div class="info">
+                <div class="icon icon-shape text-center">
+                  <svg class="text-info" width="43px" height="20px" viewBox="0 0 43 36" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                    <title>credit-card</title>
+                    <g id="Basic-Elements" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                      <g id="Rounded-Icons" transform="translate(-2169.000000, -745.000000)" fill="#FFFFFF" fill-rule="nonzero">
+                        <g id="Icons-with-opacity" transform="translate(1716.000000, 291.000000)">
+                          <g id="credit-card" transform="translate(453.000000, 454.000000)">
+                            <path class="color-background" d="M43,10.7482083 L43,3.58333333 C43,1.60354167 41.3964583,0 39.4166667,0 L3.58333333,0 C1.60354167,0 0,1.60354167 0,3.58333333 L0,10.7482083 L43,10.7482083 Z" id="Path" opacity="0.593633743">
+                            </path>
+                            <path class="color-foreground" d="M0,16.125 L0,32.25 C0,34.2297917 1.60354167,35.8333333 3.58333333,35.8333333 L39.4166667,35.8333333 C41.3964583,35.8333333 43,34.2297917 43,32.25 L43,16.125 L0,16.125 Z M19.7083333,26.875 L7.16666667,26.875 L7.16666667,23.2916667 L19.7083333,23.2916667 L19.7083333,26.875 Z M35.8333333,26.875 L28.6666667,26.875 L28.6666667,23.2916667 L35.8333333,23.2916667 L35.8333333,26.875 Z" id="Shape"></path>
+                          </g>
+                        </g>
+                      </g>
+                    </g>
+                  </svg>
+                </div>
+                <h5>
+                  Product Description
+                </h5>
+                <p>
+                  {{ product.full_description }}  
+                </p>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+
+        <div class="col-lg-4 ms-auto mt-lg-0 mt-4">
+          <div class="card shadow-lg">
+            <div class="card-header p-0 mx-3 mt-3 position-relative z-index-1">
+              <div class="d-block blur-shadow-image">
+                <img src="/static/products/{{ product.slug }}/card.jpg" alt="img-blur-shadow" class="img-fluid shadow rounded-3">
+              </div>
+              <div class="colored-shadow" style="background-image: url(&quot;https://images.unsplash.com/photo-1604446062885-9f29f136fe87?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=3300&amp;q=80&quot;);"></div>
+            </div>
+            <div class="card-body">
+              <a href="javascript:;">
+                <h5 class="mt-3">
+                  {{ product.name }}
+                </h5>
+              </a>
+              <p>
+                {{ product.short_description }}
+              </p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+  <!-- END Section with four info areas left & one card right with image and waves -->
+
+  {% include "ecommerce/modal-warning.html" %}
+
+{% endblock content %}
+
+<!-- Specific JS goes HERE --> 
+{% block javascripts %}
+
+  <script src="https://js.stripe.com/v3/"></script>
+  <script src="/static/assets/js/payments.js"></script>
+
+  <script>
+    if (document.getElementsByClassName('page-header')) {
+      window.addEventListener('scroll', function() {
+        var scrollPosition = window.pageYOffset;
+        var bgParallax = document.querySelector('.page-header');
+        var limit = bgParallax.offsetTop + bgParallax.offsetHeight;
+        if (scrollPosition > bgParallax.offsetTop && scrollPosition <= limit) {
+          bgParallax.style.backgroundPositionY = (50 - 10 * scrollPosition / limit * 3) + '%';
+        } else {
+          bgParallax.style.backgroundPositionY = '50%';
+        }
+      });
+    }
+  </script>
+
+{% endblock javascripts %}

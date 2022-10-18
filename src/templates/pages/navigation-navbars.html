@@ -1,0 +1,252 @@
+{% extends 'layouts/base.html' %}
+
+{% block title %} Navbars {% endblock title %}
+
+<!-- Specific CSS goes HERE -->
+{% block stylesheets %}{% endblock stylesheets %}
+
+{% block body_class %} navbars-sections {% endblock body_class %}
+
+{% block content %}
+  
+  {% include "includes/navigation-light.html" %}
+
+  <div class="container mt-5">
+    <div class="row">
+      <div class="col-lg-12 mx-auto">
+        <div class="mb-4 w-25">
+          <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+              <li class="breadcrumb-item"><a href="/presentation.html">Navigation</a></li>
+              <li class="breadcrumb-item active" aria-current="page">Navbars</li>
+            </ol>
+          </nav>
+          <h3>Navbars</h3>
+        </div>
+        <div class="position-relative border-radius-xl overflow-hidden shadow-lg mb-7">
+          <div class="container border-bottom">
+            <div class="row justify-space-between py-2">
+              <div class="col-lg-3 me-auto">
+                <p class="lead text-dark pt-1 mb-0">Navbar dark</p>
+              </div>
+              <div class="col-lg-3">
+                <div class="nav-wrapper position-relative end-0">
+                  <ul class="nav nav-pills nav-fill flex-row p-1" role="tablist">
+                    <li class="nav-item">
+                      <a class="nav-link mb-0 px-0 py-1 active" data-bs-toggle="tab" href="#preview-navbar-dark" role="tab" aria-controls="preview" aria-selected="true">
+                        <i class="fas fa-desktop text-sm me-2"></i> Preview
+                      </a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link mb-0 px-0 py-1" data-bs-toggle="tab" href="#code-navbar-dark" role="tab" aria-controls="code" aria-selected="false">
+                        <i class="fas fa-code text-sm me-2"></i> Code
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="tab-content tab-space">
+            <div class="tab-pane active" id="preview-navbar-dark">
+              <iframe width="100%" height="300px" srcdoc='<!doctype html><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet" />
+        <script src="https://kit.fontawesome.com/42d5adcbca.js" crossorigin="anonymous"></script>
+        <!-- Nucleo Icons -->
+        <link href="/static/assets/css/nucleo-icons.css" rel="stylesheet" />
+        <link href="/static/assets/css/nucleo-svg.css" rel="stylesheet" /><link href="https://unpkg.com/soft-ui-design-system@1.0.1/assets/css/soft-design-system.min.css" rel="stylesheet" /><!-- Navbar Dark -->
+
+<nav
+  class="navbar navbar-expand-lg navbar-dark bg-gradient-dark z-index-3 py-3">
+  <div class="container">
+    <a class="navbar-brand text-white" href="/" rel="tooltip" title="Designed and Coded by Creative Tim" data-placement="bottom" target="_blank">
+      Soft UI Design System
+    </a>
+    <a href="https://appseed.us/ui-kit/soft-ui-design-system#pricingCard" class="btn btn-sm  bg-gradient-primary  btn-round mb-0 ms-auto d-lg-none d-block">Buy Now</a>
+    <button class="navbar-toggler shadow-none ms-2" type="button" data-bs-toggle="collapse" data-bs-target="#navigation" aria-controls="navigation" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon mt-2">
+        <span class="navbar-toggler-bar bar1"></span>
+        <span class="navbar-toggler-bar bar2"></span>
+        <span class="navbar-toggler-bar bar3"></span>
+      </span>
+    </button>
+    <div class="collapse navbar-collapse pt-3 pb-2 py-lg-0" id="navigation">
+      <ul class="navbar-nav navbar-nav-hover mx-auto">
+        <li class="nav-item mx-2">
+          <a class="nav-link ps-2 d-flex justify-content-between cursor-pointer align-items-center">
+            Pages
+            <img src="/static/assets/img/down-arrow-white.svg" alt="down-arrow" class="arrow ms-1">
+          </a>
+        </li>
+
+        <li class="nav-item mx-2">
+          <a class="nav-link ps-2 d-flex justify-content-between cursor-pointer align-items-center">
+            Account
+            <img src="/static/assets/img/down-arrow-white.svg" alt="down-arrow" class="arrow ms-1">
+          </a>
+        </li>
+        <li class="nav-item mx-2">
+          <a class="nav-link ps-2 d-flex justify-content-between cursor-pointer align-items-center">
+            Blocks
+            <img src="/static/assets/img/down-arrow-white.svg" alt="down-arrow" class="arrow ms-1">
+          </a>
+        </li>
+
+        <li class="nav-item dropdown dropdown-hover mx-2">
+          <a class="nav-link ps-2 d-flex justify-content-between cursor-pointer align-items-center">
+            Docs
+            <img src="/static/assets/img/down-arrow-white.svg" alt="down-arrow" class="arrow ms-1">
+          </a>
+        </li>
+      </ul>
+
+      <ul class="navbar-nav d-lg-block d-none">
+        <li class="nav-item">
+          <a href="https://appseed.us/ui-kit/soft-ui-design-system#pricingCard" class="btn btn-sm  bg-gradient-primary  btn-round mb-0 me-1">Buy Now</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<!-- End Navbar -->
+
+
+        <script src="/static/assets/js/core/popper.min.js" type="text/javascript"></script>
+        <script src="/static/assets/js/core/bootstrap.min.js" type="text/javascript"></script>
+        '></iframe>
+            </div>
+            <div class="tab-pane" id="code-navbar-dark">
+              <div class="position-relative p-4 pb-2">
+                <a class="btn btn-sm bg-gradient-dark position-absolute end-4 mt-3" onclick="copyCode(this);" type="button"><i class="fas fa-copy text-sm me-1"></i> Copy</a>
+                <figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="c">&lt;!-- Navbar Dark --&gt;</span>
+
+<span class="nt">&lt;nav</span>
+  <span class="na">class=</span><span class="s">"navbar navbar-expand-lg navbar-dark bg-gradient-dark z-index-3 py-3"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"container"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"navbar-brand text-white"</span> <span class="na">href=</span><span class="s">"/"</span> <span class="na">rel=</span><span class="s">"tooltip"</span> <span class="na">title=</span><span class="s">"Designed and Coded by Creative Tim"</span> <span class="na">data-placement=</span><span class="s">"bottom"</span> <span class="na">target=</span><span class="s">"_blank"</span><span class="nt">&gt;</span>
+      Soft UI Design System
+    <span class="nt">&lt;/a&gt;</span>
+    <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"https://appseed.us/ui-kit/soft-ui-design-system#pricingCard"</span> <span class="na">class=</span><span class="s">"btn btn-sm  bg-gradient-primary  btn-round mb-0 ms-auto d-lg-none d-block"</span><span class="nt">&gt;</span>Buy Now<span class="nt">&lt;/a&gt;</span>
+    <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"navbar-toggler shadow-none ms-2"</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">data-bs-toggle=</span><span class="s">"collapse"</span> <span class="na">data-bs-target=</span><span class="s">"#navigation"</span> <span class="na">aria-controls=</span><span class="s">"navigation"</span> <span class="na">aria-expanded=</span><span class="s">"false"</span> <span class="na">aria-label=</span><span class="s">"Toggle navigation"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"navbar-toggler-icon mt-2"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"navbar-toggler-bar bar1"</span><span class="nt">&gt;&lt;/span&gt;</span>
+        <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"navbar-toggler-bar bar2"</span><span class="nt">&gt;&lt;/span&gt;</span>
+        <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"navbar-toggler-bar bar3"</span><span class="nt">&gt;&lt;/span&gt;</span>
+      <span class="nt">&lt;/span&gt;</span>
+    <span class="nt">&lt;/button&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"collapse navbar-collapse pt-3 pb-2 py-lg-0"</span> <span class="na">id=</span><span class="s">"navigation"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"navbar-nav navbar-nav-hover mx-auto"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"nav-item mx-2"</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"nav-link ps-2 d-flex justify-content-between cursor-pointer align-items-center"</span><span class="nt">&gt;</span>
+            Pages
+            <span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">"/static/assets/img/down-arrow-white.svg"</span> <span class="na">alt=</span><span class="s">"down-arrow"</span> <span class="na">class=</span><span class="s">"arrow ms-1"</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;/a&gt;</span>
+        <span class="nt">&lt;/li&gt;</span>
+
+        <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"nav-item mx-2"</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"nav-link ps-2 d-flex justify-content-between cursor-pointer align-items-center"</span><span class="nt">&gt;</span>
+            Account
+            <span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">"/static/assets/img/down-arrow-white.svg"</span> <span class="na">alt=</span><span class="s">"down-arrow"</span> <span class="na">class=</span><span class="s">"arrow ms-1"</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;/a&gt;</span>
+        <span class="nt">&lt;/li&gt;</span>
+        <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"nav-item mx-2"</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"nav-link ps-2 d-flex justify-content-between cursor-pointer align-items-center"</span><span class="nt">&gt;</span>
+            Blocks
+            <span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">"/static/assets/img/down-arrow-white.svg"</span> <span class="na">alt=</span><span class="s">"down-arrow"</span> <span class="na">class=</span><span class="s">"arrow ms-1"</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;/a&gt;</span>
+        <span class="nt">&lt;/li&gt;</span>
+
+        <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"nav-item dropdown dropdown-hover mx-2"</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"nav-link ps-2 d-flex justify-content-between cursor-pointer align-items-center"</span><span class="nt">&gt;</span>
+            Docs
+            <span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">"/static/assets/img/down-arrow-white.svg"</span> <span class="na">alt=</span><span class="s">"down-arrow"</span> <span class="na">class=</span><span class="s">"arrow ms-1"</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;/a&gt;</span>
+        <span class="nt">&lt;/li&gt;</span>
+      <span class="nt">&lt;/ul&gt;</span>
+
+      <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"navbar-nav d-lg-block d-none"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"nav-item"</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"https://appseed.us/ui-kit/soft-ui-design-system#pricingCard"</span> <span class="na">class=</span><span class="s">"btn btn-sm  bg-gradient-primary  btn-round mb-0 me-1"</span><span class="nt">&gt;</span>Buy Now<span class="nt">&lt;/a&gt;</span>
+        <span class="nt">&lt;/li&gt;</span>
+      <span class="nt">&lt;/ul&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/nav&gt;</span>
+<span class="c">&lt;!-- End Navbar --&gt;</span></code></pre>
+                </figure>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="position-relative border-radius-xl overflow-hidden shadow-lg mb-7">
+          <div class="container border-bottom">
+            <div class="row py-3">
+              <div class="col-lg-4 text-start">
+                <p class="lead text-dark pt-1 mb-0">Navbar light</p>
+              </div>
+              <div class="col-lg-4 mt-1 text-center">
+                <span class="badge bg-light text-dark"><i class="fas fa-lock me-1" aria-hidden="true"></i> Screenshot</span>
+              </div>
+              <div class="col-lg-4 text-end my-auto">
+                <a href="/presentation.html#pricing-soft-ui" class="text-primary icon-move-right">Get the Code
+                  <i class="fas fa-arrow-right text-sm ms-1" aria-hidden="true"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div>
+            <img class="w-100" src="https://raw.githubusercontent.com/creativetimofficial/public-assets/master/soft-ui-design-system/presentation/sections/navigation/navbars/navbar-2.jpg" alt="navbar-2">
+          </div>
+        </div>
+        <div class="position-relative border-radius-xl overflow-hidden shadow-lg mb-7">
+          <div class="container border-bottom">
+            <div class="row py-3">
+              <div class="col-lg-4 text-start">
+                <p class="lead text-dark pt-1 mb-0">Navbar transparent</p>
+              </div>
+              <div class="col-lg-4 mt-1 text-center">
+                <span class="badge bg-light text-dark"><i class="fas fa-lock me-1" aria-hidden="true"></i> Screenshot</span>
+              </div>
+              <div class="col-lg-4 text-end my-auto">
+                <a href="/presentation.html#pricing-soft-ui" class="text-primary icon-move-right">Get the Code
+                  <i class="fas fa-arrow-right text-sm ms-1" aria-hidden="true"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div>
+            <img class="w-100" src="https://raw.githubusercontent.com/creativetimofficial/public-assets/master/soft-ui-design-system/presentation/sections/navigation/navbars/navbar-3.jpg" alt="navbar-3">
+          </div>
+        </div>
+        <div class="position-relative border-radius-xl overflow-hidden shadow-lg mb-7">
+          <div class="container border-bottom">
+            <div class="row py-3">
+              <div class="col-lg-4 text-start">
+                <p class="lead text-dark pt-1 mb-0">Navbar blur</p>
+              </div>
+              <div class="col-lg-4 mt-1 text-center">
+                <span class="badge bg-light text-dark"><i class="fas fa-lock me-1" aria-hidden="true"></i> Screenshot</span>
+              </div>
+              <div class="col-lg-4 text-end my-auto">
+                <a href="/presentation.html#pricing-soft-ui" class="text-primary icon-move-right">Get the Code
+                  <i class="fas fa-arrow-right text-sm ms-1" aria-hidden="true"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div>
+            <img class="w-100" src="https://raw.githubusercontent.com/creativetimofficial/public-assets/master/soft-ui-design-system/presentation/sections/navigation/navbars/navbar-4.jpg" alt="navbar-4">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+{% endblock content %}
+
+<!-- Specific JS goes HERE --> 
+{% block javascripts %}
+
+  <script src="/static/assets/js/soft-design-system.min.js?v=1.0.1" type="text/javascript"></script>
+
+{% endblock javascripts %}

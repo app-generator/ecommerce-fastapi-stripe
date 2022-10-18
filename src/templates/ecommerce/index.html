@@ -1,0 +1,128 @@
+{% extends 'layouts/base.html' %}
+
+{% block title %} Author {% endblock title %}
+
+<!-- Specific CSS goes HERE -->
+{% block stylesheets %}{% endblock stylesheets %}
+
+{% block body_class %} blog-author bg-gray-100 {% endblock body_class %}
+
+{% block content %}
+
+  {% include "includes/navigation-light.html" %}
+
+  <section class="py-sm-7 py-5 position-relative">
+    <div class="container">
+      <div class="row">
+        <div class="col-12 mx-auto">
+          <div class="row py-lg-7 py-5">
+            <div class="col-lg-3 col-md-5 position-relative my-auto">
+              <img class="img border-radius-lg max-width-200 w-100 position-relative z-index-2" 
+                   src="/static/products/{{ featured_product.slug }}/card.jpg">
+            </div>
+            <div class="col-lg-7 col-md-7 z-index-2 position-relative px-md-2 px-sm-5 mt-sm-0 mt-4">
+              <div class="d-flex justify-content-between align-items-center mb-2">
+                <h4 class="mb-0">
+                  <a href="{{ url_for('products_index') }}{{ featured_product.slug }}">
+                    {{ featured_product.name }}
+                  </a>
+                </h4>
+                <div class="d-block">
+                  <a href="{{ url_for('products_index') }}{{ featured_product.slug }}" 
+                     class="btn btn-sm btn-outline-info text-nowrap mb-0">PROMO</a>
+                </div>                
+              </div>
+              <div class="row mb-4">
+                <div class="col-auto">
+                  <span>Featured Product - ${{ featured_product.price }}</span>
+                </div>
+              </div>
+              <p class="text-lg mb-0">
+                {{ featured_product.full_description }} 
+                <br>
+                <a href="{{ url_for('products_index') }}{{ featured_product.slug }}" class="text-info icon-move-right">See Product
+                  <i class="fas fa-arrow-right text-sm ms-1"></i>
+                </a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-3">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6">
+          <h3 class="mb-5">
+            Latest PRODUCTS
+          </h3>
+        </div>
+      </div>
+      <div class="row"> 
+
+        {% for product in products %}
+      
+          <div class="col-lg-3 col-sm-6">
+            <div class="card card-plain card-blog">
+              <div class="card-image border-radius-lg position-relative">
+                <a href="{{ url_for('products_index') }}{{ product.slug }}">
+                  <img class="w-100 border-radius-lg move-on-hover shadow" 
+                       src="/static/products/{{ product.slug }}/card.jpg">
+                </a>
+              </div>
+              <div class="card-body px-0">
+                <h5>
+                  <a href="{{ url_for('products_index') }}{{ product.slug }}" class="text-dark font-weight-bold">
+                    {{ product.name }} - ${{ product.price }}
+                  </a>
+                </h5>
+                <p>
+                  {{ product.info }}
+                </p>
+                <a href="{{ url_for('products_index') }}{{ product.slug }}" class="text-info icon-move-right">
+                  See Product
+                  <i class="fas fa-arrow-right text-sm"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        
+        {% endfor %}
+
+        <div class="col-lg-3 col-md-12 col-12">
+          <div class="card card-blog card-background">
+            <div class="full-background" style="background-image: url('https://images.unsplash.com/photo-1554189097-ffe88e998a2b?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=934&q=80')"></div>
+            <div class="card-body">
+              <div class="content-left text-left my-auto py-4">
+                <a href="javascript:;">
+                  <h2 class="card-title text-white">
+                    Simple eCommerce App
+                  </h2>
+                  <p class="card-description text-white">
+                    The products are loaded from static files (JSON format) and presented to the user using a modern UI Kit
+                  </p>
+                  <a target="_blank" href="https://github.com/app-generator/sample-flask-stripe"  
+                     class="text-white icon-move-right">
+                    Read More 
+                    <i class="fas fa-arrow-right text-sm"></i>
+                  </a>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+{% endblock content %}
+
+<!-- Specific JS goes HERE --> 
+{% block javascripts %}
+
+  <script src="/static/assets/js/soft-design-system.min.js?v=1.0.1" type="text/javascript"></script>
+
+{% endblock javascripts %}

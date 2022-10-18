@@ -1,0 +1,250 @@
+{% extends 'layouts/base.html' %}
+
+{% block title %} Author {% endblock title %}
+
+<!-- Specific CSS goes HERE -->
+{% block stylesheets %}{% endblock stylesheets %}
+
+{% block body_class %} blog-author bg-gray-100 {% endblock body_class %}
+
+{% block content %}
+
+  {% include "includes/navigation-light.html" %}
+
+  <section class="py-sm-7 py-5 position-relative">
+    <div class="container">
+      <div class="row">
+        <div class="col-12 mx-auto">
+          <div class="row py-lg-7 py-5">
+            <div class="col-lg-3 col-md-5 position-relative my-auto">
+              <img class="img border-radius-lg max-width-200 w-100 position-relative z-index-2" src="/static/assets/img/bruce-mars.jpg">
+            </div>
+            <div class="col-lg-7 col-md-7 z-index-2 position-relative px-md-2 px-sm-5 mt-sm-0 mt-4">
+              <div class="d-flex justify-content-between align-items-center mb-2">
+                <h4 class="mb-0">Michael Roven</h4>
+                <div class="d-block">
+                  <button type="button" class="btn btn-sm btn-outline-info text-nowrap mb-0">Follow</button>
+                </div>
+              </div>
+              <div class="row mb-4">
+                <div class="col-auto">
+                  <span class="h6">323</span>
+                  <span>Posts</span>
+                </div>
+                <div class="col-auto">
+                  <span class="h6">3.5k</span>
+                  <span>Followers</span>
+                </div>
+                <div class="col-auto">
+                  <span class="h6">260</span>
+                  <span>Following</span>
+                </div>
+              </div>
+              <p class="text-lg mb-0">
+                Decisions: If you can’t decide, the answer is no.
+                If two equally difficult paths, choose the one more
+                painful in the short term (pain avoidance is creating
+                an illusion of equality). Choose the path that leaves
+                you more equanimous. <br><a href="javascript:;" class="text-info icon-move-right">More about me
+                  <i class="fas fa-arrow-right text-sm ms-1"></i>
+                </a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-3">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6">
+          <h3 class="mb-5">Check my latest blogposts</h3>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-3 col-sm-6">
+          <div class="card card-plain card-blog">
+            <div class="card-image border-radius-lg position-relative">
+              <a href="javascript:;">
+                <img class="w-100 border-radius-lg move-on-hover shadow" src="https://images.unsplash.com/photo-1524672353063-4f66ee1f385e?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=2249&q=80">
+              </a>
+            </div>
+            <div class="card-body px-0">
+              <h5>
+                <a href="javascript:;" class="text-dark font-weight-bold">Rover raised $65 million</a>
+              </h5>
+              <p>
+                Finding temporary housing for your dog should be as easy as
+                renting an Airbnb. That’s the idea behind Rover ...
+              </p>
+              <a href="javascript:;" class="text-info icon-move-right">Read More
+                <i class="fas fa-arrow-right text-sm"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-sm-6">
+          <div class="card card-plain card-blog">
+            <div class="card-image border-radius-lg position-relative">
+              <a href="javascript:;">
+                <img class="w-100 border-radius-lg move-on-hover shadow" src="https://images.unsplash.com/photo-1516796181074-bf453fbfa3e6?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=2250&q=80">
+              </a>
+            </div>
+            <div class="card-body px-0">
+              <h5>
+                <a href="javascript:;" class="text-dark font-weight-bold">MateLabs machine learning</a>
+              </h5>
+              <p>
+                If you’ve ever wanted to train a machine learning model
+                and integrate it with IFTTT, you now can with ...
+              </p>
+              <a href="javascript:;" class="text-info icon-move-right">Read More
+                <i class="fas fa-arrow-right text-sm"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-sm-6">
+          <div class="card card-plain card-blog">
+            <div class="card-image border-radius-lg position-relative">
+              <a href="javascript:;">
+                <img class="w-100 border-radius-lg move-on-hover shadow" src="https://images.unsplash.com/photo-1524678714210-9917a6c619c2?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=2249&q=80">
+              </a>
+            </div>
+            <div class="card-body px-0">
+              <h5>
+                <a href="javascript:;" class="text-dark font-weight-bold">US venture investment ticks</a>
+              </h5>
+              <p>
+                Venture investment in U.S. startups rose sequentially in
+                the second quarter of 2017, boosted by large, ate-stage financings
+              </p>
+              <a href="javascript:;" class="text-info icon-move-right">Read More
+                <i class="fas fa-arrow-right text-sm"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-12 col-12">
+          <div class="card card-blog card-background">
+            <div class="full-background" style="background-image: url('https://images.unsplash.com/photo-1554189097-ffe88e998a2b?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=934&q=80')"></div>
+            <div class="card-body">
+              <div class="content-left text-left my-auto py-4">
+                <a href="javascript:;">
+                  <h2 class="card-title text-white">Flexible work hours</h2>
+                  <p class="card-description text-white">Rather than worrying about switching offices every couple years, you stay in the same place.</p>
+                  <a href="javascript:;" class="text-white icon-move-right">Read More
+                    <i class="fas fa-arrow-right text-sm"></i>
+                  </a>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-lg-7">
+    <div class="container">
+      <div class="row">
+        <div class="col">
+          <div class="card overflow-hidden mb-5">
+            <div class="row">
+              <div class="col-lg-7">
+                <form role="form" class="p-3" id="contact-form" method="post">
+                  <div class="card-header px-4 py-sm-5 py-3">
+                    <h2>Say Hi!</h2>
+                    <p class="lead"> We'd like to talk with you.</p>
+                  </div>
+                  <div class="card-body pt-1">
+                    <div class="row">
+                      <div class="col-md-12 pe-2 mb-3">
+                        <label>My name is</label>
+                        <input class="form-control" placeholder="Full Name" type="text">
+                      </div>
+                      <div class="col-md-12 pe-2 mb-3">
+                        <label>I'm looking for</label>
+                        <input class="form-control" placeholder="What you love" type="text">
+                      </div>
+                      <div class="col-md-12 pe-2 mb-3">
+                        <div class="form-group mb-0">
+                          <label>Your message</label>
+                          <textarea name="message" class="form-control" id="message" rows="6" placeholder="I want to say that..."></textarea>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-md-6 text-right ms-auto">
+                        <button type="submit" class="btn btn-round bg-gradient-info mb-0">Send Message</button>
+                      </div>
+                    </div>
+                  </div>
+                </form>
+              </div>
+              <div class="col-lg-5 position-relative bg-cover px-0" style="background-image: url('/static/assets/img/curved-images/curved5.jpg')">
+                <div class="position-absolute z-index-2 w-100 h-100 top-0 start-0 d-lg-block d-none">
+                  <img src="/static/assets/img/wave-1.svg" class="h-100 ms-n2">
+                </div>
+                <div class="z-index-2 text-center d-flex h-100 w-100 d-flex m-auto justify-content-center">
+                  <div class="mask bg-gradient-info opacity-9"></div>
+                  <div class="p-5 ps-sm-8 position-relative text-left my-auto z-index-2">
+                    <h3 class="text-white">Contact Information</h3>
+                    <p class="text-white opacity-8 mb-4">Fill up the form and our Team will get back to you within 24 hours.</p>
+                    <div class="d-flex p-2 text-white">
+                      <div>
+                        <i class="fas fa-phone text-sm"></i>
+                      </div>
+                      <div class="ps-3">
+                        <span class="text-sm opacity-8">(+40) 772 100 200</span>
+                      </div>
+                    </div>
+                    <div class="d-flex p-2 text-white">
+                      <div>
+                        <i class="fas fa-envelope text-sm"></i>
+                      </div>
+                      <div class="ps-3">
+                        <span class="text-sm opacity-8">hello@creative-tim.com</span>
+                      </div>
+                    </div>
+                    <div class="d-flex p-2 text-white">
+                      <div>
+                        <i class="fas fa-map-marker-alt text-sm"></i>
+                      </div>
+                      <div class="ps-3">
+                        <span class="text-sm opacity-8">Dyonisie Wolf Bucharest, RO 010458</span>
+                      </div>
+                    </div>
+                    <div class="mt-4">
+                      <button type="button" class="btn btn-icon-only btn-link text-white btn-lg mb-0" data-toggle="tooltip" data-placement="bottom" data-original-title="Log in with Facebook">
+                        <i class="fab fa-facebook"></i>
+                      </button>
+                      <button type="button" class="btn btn-icon-only btn-link text-white btn-lg mb-0" data-toggle="tooltip" data-placement="bottom" data-original-title="Log in with Twitter">
+                        <i class="fab fa-twitter"></i>
+                      </button>
+                      <button type="button" class="btn btn-icon-only btn-link text-white btn-lg mb-0" data-toggle="tooltip" data-placement="bottom" data-original-title="Log in with Dribbble">
+                        <i class="fab fa-dribbble"></i>
+                      </button>
+                      <button type="button" class="btn btn-icon-only btn-link text-white btn-lg mb-0" data-toggle="tooltip" data-placement="bottom" data-original-title="Log in with Instagram">
+                        <i class="fab fa-instagram"></i>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+  </section>
+
+{% endblock content %}
+
+<!-- Specific JS goes HERE --> 
+{% block javascripts %}
+
+  <script src="/static/assets/js/soft-design-system.min.js?v=1.0.1" type="text/javascript"></script>
+
+{% endblock javascripts %}

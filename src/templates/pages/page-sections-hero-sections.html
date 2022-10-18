@@ -1,0 +1,315 @@
+{% extends 'layouts/base.html' %}
+
+{% block title %} Page Headers {% endblock title %}
+
+<!-- Specific CSS goes HERE -->
+{% block stylesheets %}{% endblock stylesheets %}
+
+{% block body_class %} page-headers-sections {% endblock body_class %}
+
+{% block content %}
+  
+  {% include "includes/navigation-light.html" %}
+
+  <div class="container mt-5">
+    <div class="row">
+      <div class="col-lg-12 mx-auto">
+        <div class="mb-4 w-25">
+          <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+              <li class="breadcrumb-item"><a href="/presentation.html">Page Sections</a></li>
+              <li class="breadcrumb-item active" aria-current="page">Page Headers</li>
+            </ol>
+          </nav>
+          <h3>Page Headers</h3>
+        </div>
+        <div class="position-relative border-radius-xl overflow-hidden shadow-lg mb-7">
+          <div class="container border-bottom">
+            <div class="row justify-space-between py-2">
+              <div class="col-lg-3 me-auto">
+                <p class="lead text-dark pt-1 mb-0">Header 1</p>
+              </div>
+              <div class="col-lg-3">
+                <div class="nav-wrapper position-relative end-0">
+                  <ul class="nav nav-pills nav-fill flex-row p-1" role="tablist">
+                    <li class="nav-item">
+                      <a class="nav-link mb-0 px-0 py-1 active" data-bs-toggle="tab" href="#preview-header-1" role="tab" aria-controls="preview" aria-selected="true">
+                        <i class="fas fa-desktop text-sm me-2"></i> Preview
+                      </a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link mb-0 px-0 py-1" data-bs-toggle="tab" href="#code-header-1" role="tab" aria-controls="code" aria-selected="false">
+                        <i class="fas fa-code text-sm me-2"></i> Code
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="tab-content tab-space">
+            <div class="tab-pane active" id="preview-header-1">
+              <iframe width="100%" height="600px" srcdoc='<!doctype html><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet" />
+        <script src="https://kit.fontawesome.com/42d5adcbca.js" crossorigin="anonymous"></script>
+        <!-- Nucleo Icons -->
+        <link href="/static/assets/css/nucleo-icons.css" rel="stylesheet" />
+        <link href="/static/assets/css/nucleo-svg.css" rel="stylesheet" /><link href="https://unpkg.com/soft-ui-design-system@1.0.1/assets/css/soft-design-system.min.css" rel="stylesheet" /><!-- -------- START HEADER 1 w/ text and image on right ------- -->
+<header>
+  <div class="page-header section-height-100">
+    <div class="oblique position-absolute top-0 h-100 d-md-block d-none">
+      <div class="oblique-image bg-cover position-absolute fixed-top ms-auto h-100 z-index-0 ms-n6" style="background-image:url(/static/assets/img/curved-images/curved11.jpg)"></div>
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6 col-md-7 d-flex justify-content-center flex-column">
+          <h1 class="text-gradient text-primary">Your Work With</h1>
+          <h1 class="mb-4">Soft Design System</h1>
+          <p class="lead pe-5 me-5">The time is now for it be okay to be great. People in this world shun people for being nice. </p>
+          <div class="buttons">
+            <button type="button" class="btn bg-gradient-primary mt-4">Get Started</button>
+            <button type="button" class="btn text-primary shadow-none mt-4">Read more</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+<!-- -------- END HEADER 1 w/ text and image on right ------- -->
+
+        '></iframe>
+            </div>
+            <div class="tab-pane" id="code-header-1">
+              <div class="position-relative p-4 pb-2">
+                <a class="btn btn-sm bg-gradient-dark position-absolute end-4 mt-3" onclick="copyCode(this);" type="button"><i class="fas fa-copy text-sm me-1"></i> Copy</a>
+                <figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="c">&lt;!-- -------- START HEADER 1 w/ text and image on right ------- --&gt;</span>
+<span class="nt">&lt;header&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"page-header section-height-100"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"oblique position-absolute top-0 h-100 d-md-block d-none"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"oblique-image bg-cover position-absolute fixed-top ms-auto h-100 z-index-0 ms-n6"</span> <span class="na">style=</span><span class="s">"background-image:url(/static/assets/img/curved-images/curved11.jpg)"</span><span class="nt">&gt;&lt;/div&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"container"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"row"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-lg-6 col-md-7 d-flex justify-content-center flex-column"</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;h1</span> <span class="na">class=</span><span class="s">"text-gradient text-primary"</span><span class="nt">&gt;</span>Your Work With<span class="nt">&lt;/h1&gt;</span>
+          <span class="nt">&lt;h1</span> <span class="na">class=</span><span class="s">"mb-4"</span><span class="nt">&gt;</span>Soft Design System<span class="nt">&lt;/h1&gt;</span>
+          <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"lead pe-5 me-5"</span><span class="nt">&gt;</span>The time is now for it be okay to be great. People in this world shun people for being nice. <span class="nt">&lt;/p&gt;</span>
+          <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"buttons"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn bg-gradient-primary mt-4"</span><span class="nt">&gt;</span>Get Started<span class="nt">&lt;/button&gt;</span>
+            <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn text-primary shadow-none mt-4"</span><span class="nt">&gt;</span>Read more<span class="nt">&lt;/button&gt;</span>
+          <span class="nt">&lt;/div&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+      <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/header&gt;</span>
+<span class="c">&lt;!-- -------- END HEADER 1 w/ text and image on right ------- --&gt;</span></code></pre>
+                </figure>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="position-relative border-radius-xl overflow-hidden shadow-lg mb-7">
+          <div class="container border-bottom">
+            <div class="row py-3">
+              <div class="col-lg-4 text-start">
+                <p class="lead text-dark pt-1 mb-0">Header 2</p>
+              </div>
+              <div class="col-lg-4 mt-1 text-center">
+                <span class="badge bg-light text-dark"><i class="fas fa-lock me-1" aria-hidden="true"></i> Screenshot</span>
+              </div>
+              <div class="col-lg-4 text-end my-auto">
+                <a href="/presentation.html#pricing-soft-ui" class="text-primary icon-move-right">Get the Code
+                  <i class="fas fa-arrow-right text-sm ms-1" aria-hidden="true"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div>
+            <img class="w-100" src="https://raw.githubusercontent.com/creativetimofficial/public-assets/master/soft-ui-design-system/presentation/sections/page-sections/page-headers/header-2.jpg" alt="header-2">
+          </div>
+        </div>
+        <div class="position-relative border-radius-xl overflow-hidden shadow-lg mb-7">
+          <div class="container border-bottom">
+            <div class="row py-3">
+              <div class="col-lg-4 text-start">
+                <p class="lead text-dark pt-1 mb-0">Header 3</p>
+              </div>
+              <div class="col-lg-4 mt-1 text-center">
+                <span class="badge bg-light text-dark"><i class="fas fa-lock me-1" aria-hidden="true"></i> Screenshot</span>
+              </div>
+              <div class="col-lg-4 text-end my-auto">
+                <a href="/presentation.html#pricing-soft-ui" class="text-primary icon-move-right">Get the Code
+                  <i class="fas fa-arrow-right text-sm ms-1" aria-hidden="true"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div>
+            <img class="w-100" src="https://raw.githubusercontent.com/creativetimofficial/public-assets/master/soft-ui-design-system/presentation/sections/page-sections/page-headers/header-3.jpg" alt="header-3">
+          </div>
+        </div>
+        <div class="position-relative border-radius-xl overflow-hidden shadow-lg mb-7">
+          <div class="container border-bottom">
+            <div class="row py-3">
+              <div class="col-lg-4 text-start">
+                <p class="lead text-dark pt-1 mb-0">Header 4</p>
+              </div>
+              <div class="col-lg-4 mt-1 text-center">
+                <span class="badge bg-light text-dark"><i class="fas fa-lock me-1" aria-hidden="true"></i> Screenshot</span>
+              </div>
+              <div class="col-lg-4 text-end my-auto">
+                <a href="/presentation.html#pricing-soft-ui" class="text-primary icon-move-right">Get the Code
+                  <i class="fas fa-arrow-right text-sm ms-1" aria-hidden="true"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div>
+            <img class="w-100" src="https://raw.githubusercontent.com/creativetimofficial/public-assets/master/soft-ui-design-system/presentation/sections/page-sections/page-headers/header-4.jpg" alt="header-4">
+          </div>
+        </div>
+        <div class="position-relative border-radius-xl overflow-hidden shadow-lg mb-7">
+          <div class="container border-bottom">
+            <div class="row py-3">
+              <div class="col-lg-4 text-start">
+                <p class="lead text-dark pt-1 mb-0">Header 5</p>
+              </div>
+              <div class="col-lg-4 mt-1 text-center">
+                <span class="badge bg-light text-dark"><i class="fas fa-lock me-1" aria-hidden="true"></i> Screenshot</span>
+              </div>
+              <div class="col-lg-4 text-end my-auto">
+                <a href="/presentation.html#pricing-soft-ui" class="text-primary icon-move-right">Get the Code
+                  <i class="fas fa-arrow-right text-sm ms-1" aria-hidden="true"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div>
+            <img class="w-100" src="https://raw.githubusercontent.com/creativetimofficial/public-assets/master/soft-ui-design-system/presentation/sections/page-sections/page-headers/header-5.jpg" alt="header-5">
+          </div>
+        </div>
+        <div class="position-relative border-radius-xl overflow-hidden shadow-lg mb-7">
+          <div class="container border-bottom">
+            <div class="row py-3">
+              <div class="col-lg-4 text-start">
+                <p class="lead text-dark pt-1 mb-0">Header 6</p>
+              </div>
+              <div class="col-lg-4 mt-1 text-center">
+                <span class="badge bg-light text-dark"><i class="fas fa-lock me-1" aria-hidden="true"></i> Screenshot</span>
+              </div>
+              <div class="col-lg-4 text-end my-auto">
+                <a href="/presentation.html#pricing-soft-ui" class="text-primary icon-move-right">Get the Code
+                  <i class="fas fa-arrow-right text-sm ms-1" aria-hidden="true"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div>
+            <img class="w-100" src="https://raw.githubusercontent.com/creativetimofficial/public-assets/master/soft-ui-design-system/presentation/sections/page-sections/page-headers/header-6.jpg" alt="header-6">
+          </div>
+        </div>
+        <div class="position-relative border-radius-xl overflow-hidden shadow-lg mb-7">
+          <div class="container border-bottom">
+            <div class="row py-3">
+              <div class="col-lg-4 text-start">
+                <p class="lead text-dark pt-1 mb-0">Header 7</p>
+              </div>
+              <div class="col-lg-4 mt-1 text-center">
+                <span class="badge bg-light text-dark"><i class="fas fa-lock me-1" aria-hidden="true"></i> Screenshot</span>
+              </div>
+              <div class="col-lg-4 text-end my-auto">
+                <a href="/presentation.html#pricing-soft-ui" class="text-primary icon-move-right">Get the Code
+                  <i class="fas fa-arrow-right text-sm ms-1" aria-hidden="true"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div>
+            <img class="w-100" src="https://raw.githubusercontent.com/creativetimofficial/public-assets/master/soft-ui-design-system/presentation/sections/page-sections/page-headers/header-7.jpg" alt="header-7">
+          </div>
+        </div>
+        <div class="position-relative border-radius-xl overflow-hidden shadow-lg mb-7">
+          <div class="container border-bottom">
+            <div class="row py-3">
+              <div class="col-lg-4 text-start">
+                <p class="lead text-dark pt-1 mb-0">Header 8</p>
+              </div>
+              <div class="col-lg-4 mt-1 text-center">
+                <span class="badge bg-light text-dark"><i class="fas fa-lock me-1" aria-hidden="true"></i> Screenshot</span>
+              </div>
+              <div class="col-lg-4 text-end my-auto">
+                <a href="/presentation.html#pricing-soft-ui" class="text-primary icon-move-right">Get the Code
+                  <i class="fas fa-arrow-right text-sm ms-1" aria-hidden="true"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div>
+            <img class="w-100" src="https://raw.githubusercontent.com/creativetimofficial/public-assets/master/soft-ui-design-system/presentation/sections/page-sections/page-headers/header-8.jpg" alt="header-8">
+          </div>
+        </div>
+        <div class="position-relative border-radius-xl overflow-hidden shadow-lg mb-7">
+          <div class="container border-bottom">
+            <div class="row py-3">
+              <div class="col-lg-4 text-start">
+                <p class="lead text-dark pt-1 mb-0">Header 9</p>
+              </div>
+              <div class="col-lg-4 mt-1 text-center">
+                <span class="badge bg-light text-dark"><i class="fas fa-lock me-1" aria-hidden="true"></i> Screenshot</span>
+              </div>
+              <div class="col-lg-4 text-end my-auto">
+                <a href="/presentation.html#pricing-soft-ui" class="text-primary icon-move-right">Get the Code
+                  <i class="fas fa-arrow-right text-sm ms-1" aria-hidden="true"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div>
+            <img class="w-100" src="https://raw.githubusercontent.com/creativetimofficial/public-assets/master/soft-ui-design-system/presentation/sections/page-sections/page-headers/header-9.jpg" alt="header-9">
+          </div>
+        </div>
+        <div class="position-relative border-radius-xl overflow-hidden shadow-lg mb-7">
+          <div class="container border-bottom">
+            <div class="row py-3">
+              <div class="col-lg-4 text-start">
+                <p class="lead text-dark pt-1 mb-0">Header 10</p>
+              </div>
+              <div class="col-lg-4 mt-1 text-center">
+                <span class="badge bg-light text-dark"><i class="fas fa-lock me-1" aria-hidden="true"></i> Screenshot</span>
+              </div>
+              <div class="col-lg-4 text-end my-auto">
+                <a href="/presentation.html#pricing-soft-ui" class="text-primary icon-move-right">Get the Code
+                  <i class="fas fa-arrow-right text-sm ms-1" aria-hidden="true"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div>
+            <img class="w-100" src="https://raw.githubusercontent.com/creativetimofficial/public-assets/master/soft-ui-design-system/presentation/sections/page-sections/page-headers/header-10.jpg" alt="header-10">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+{% endblock content %}
+
+<!-- Specific JS goes HERE --> 
+{% block javascripts %}
+
+  <script src="/static/assets/js/soft-design-system.min.js?v=1.0.1" type="text/javascript"></script>
+  <script>
+    if (document.getElementById('typed')) {
+      var typed = new Typed("#typed", {
+        stringsElement: '#typed-strings',
+        typeSpeed: 70,
+        backSpeed: 50,
+        backDelay: 200,
+        startDelay: 500,
+        loop: true
+      });
+    }
+  </script>
+
+{% endblock javascripts %}
