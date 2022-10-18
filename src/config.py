@@ -1,3 +1,15 @@
+from pydantic import BaseSettings
+
+class Settings(BaseSettings):
+
+    secret_key: str
+
+    class Config:
+        env_file = "./.env"
+
+
+settings = Settings()
+
 # # -*- encoding: utf-8 -*-
 # """
 # Copyright (c) 2019 - present AppSeed.us
