@@ -1,7 +1,7 @@
 from fastapi import APIRouter, HTTPException, status
 from typing import List
 
-from src import schemas, models, app
+from src import schemas
 from src.helpers.utils import get_local_products
 
 router = APIRouter(
