@@ -10,12 +10,14 @@ def get_local_products():
     product_dicts = []
     for i, product in enumerate(products):
         absolute_path = path.join(products_path, product)
-        print (absolute_path)
 
         with open(absolute_path, 'r') as product_json:
             data = json.load(product_json)
-            # verify_product = schemas.ProductBase(data)
-            product_dicts.append(data)
+            try:
+                verify_product = schemas.ProductBase(**data)
+                product_dicts.append(data)
+            except:
+                continue
 
     return product_dicts
 
