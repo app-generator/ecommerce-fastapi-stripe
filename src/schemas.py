@@ -10,7 +10,7 @@ class ProductBase(BaseModel):
     
 
 class Product(ProductBase):
-    # id: int
+    slug: str
     class Config:
         orm_mode = True
 

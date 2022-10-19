@@ -30,7 +30,7 @@ async def products_index(request: Request, response_model=HTMLResponse):
 
     featured_product = response.json()
 
-    print (featured_product)
+    # print (featured_product['slug'])
 
 
 
