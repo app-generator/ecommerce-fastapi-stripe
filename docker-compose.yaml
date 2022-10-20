@@ -1,26 +1,12 @@
 version: "3.8"
 services:
   appseed-app:
+    build: .
     container_name: appseed_app
     restart: always
     working_dir: /usr/src/app
+    ports:
+      - "5085:5085"
     env_file:
       - .env    
-    build: .
-    command: uvicorn src.app:app --proxy-headers --host 0.0.0.0 --port 80
-  nginx:
-    container_name: nginx
-    restart: always
-    image: "nginx:latest"
-    ports:
-      - "80:5085"
-    volumes:
-      - ./nginx:/etc/nginx/conf.d
-    networks:
-      - web_network
-    depends_on: 
-      - appseed-app
-networks:
-  web_network:
-    driver: bridge
-
+    command: uvicorn src.app:app --host 0.0.0.0 --port 5085

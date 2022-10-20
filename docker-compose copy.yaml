@@ -24,3 +24,14 @@ networks:
   web_network:
     driver: bridge
 
+
+
+version: '3'
+services:
+  core_api:
+    build: .
+    container_name: "testme"
+    ports:
+      - "5085:15400"
+    volumes:
+      - ./app/:/app
