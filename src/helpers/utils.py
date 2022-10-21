@@ -21,11 +21,7 @@ def get_local_products():
             try:
                 product_slug = create_slug(product)
                 data['slug'] = product_slug
-                # value = data['price']
-                # value = int(value)
-                # data
                 verify_product = schemas.ProductBase(**data)
-                # data['price'] = int(100)
                 product_dicts.append(data)
             
             except Exception as e:
