@@ -22,17 +22,30 @@ async def index(request: Request, response_model=HTMLResponse):
 async def products_index(request: Request, response_model=HTMLResponse):
     featured_product_slug = 'featured'
     base_url = request.base_url
-    products_url = app.product_router.url_path_for("get_product_by_slug", slug=featured_product_slug)
-    request_url = base_url.__str__() + products_url.__str__()[1:]
+    product_url = app.product_router.url_path_for("get_product_by_slug", slug=featured_product_slug)
+    request_url = base_url.__str__() + product_url.__str__()[1:]
 
     http3client = http3.AsyncClient()
     response = await http3client.get(request_url)
 
     featured_product = response.json()
 
+    products_url = app.product_router.url_path_for("get_products")
+    request_url2 = base_url.__str__() + products_url.__str__()[1:]
+
+    http3client = http3.AsyncClient()
+    response = await http3client.get(request_url2)
+
+    products = response.json()
+    for i,product in enumerate(products):
+        if (product['slug']==featured_product_slug):
+            del products[i]
+
+
     return TEMPLATES.TemplateResponse("ecommerce/index.html", {
         "request" : request,
-        "featured_product" : featured_product
+        "featured_product" : featured_product,
+        "products": products,
         })
 
 

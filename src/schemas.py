@@ -2,7 +2,7 @@ from pydantic import BaseModel
 
 class ProductBase(BaseModel):
     name: str
-    price: float
+    price: int
     currency: str
     info: str
     short_description: str
