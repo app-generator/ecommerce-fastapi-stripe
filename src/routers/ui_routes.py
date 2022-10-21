@@ -1,5 +1,5 @@
 from fastapi import APIRouter, Request, status
-from fastapi.responses import HTMLResponse
+from fastapi.responses import HTMLResponse, RedirectResponse
 from fastapi.templating import Jinja2Templates
 from pathlib import Path
 from src.config import settings
@@ -60,11 +60,11 @@ async def product_info(product_slug: str, request: Request, response_model=HTMLR
     http3client = http3.AsyncClient()
     response = await http3client.get(request_url)
 
+    if (response.status_code==404):
+        redirect = RedirectResponse(url=router.url_path_for('products_index'))
+        return redirect
+
     product = response.json()
-
-    if (not product):
-        pass
-
 
     return TEMPLATES.TemplateResponse("ecommerce/template.html", {
         "request" : request,
