@@ -18,7 +18,7 @@ async def index(request: Request, response_model=HTMLResponse):
     return TEMPLATES.TemplateResponse("pages/index.html", {"request" : request})
 
 
-@router.get("/products", status_code=status.HTTP_200_OK)
+@router.get("/products/", status_code=status.HTTP_200_OK)
 async def products_index(request: Request, response_model=HTMLResponse):
     featured_product_slug = 'featured'
     base_url = request.base_url
