@@ -2,6 +2,7 @@ from fastapi import APIRouter, Request, status
 from fastapi.responses import HTMLResponse
 from fastapi.templating import Jinja2Templates
 from pathlib import Path
+from src.config import settings
 import http3
 
 from src import app, schemas
@@ -46,6 +47,29 @@ async def products_index(request: Request, response_model=HTMLResponse):
         "request" : request,
         "featured_product" : featured_product,
         "products": products,
+        })
+
+
+
+@router.get("/products/{product_slug}", status_code=status.HTTP_200_OK)
+async def product_info(product_slug: str, request: Request, response_model=HTMLResponse):
+    base_url = request.base_url
+    product_url = app.product_router.url_path_for("get_product_by_slug", slug=product_slug)
+    request_url = base_url.__str__() + product_url.__str__()[1:]
+
+    http3client = http3.AsyncClient()
+    response = await http3client.get(request_url)
+
+    product = response.json()
+
+    if (not product):
+        pass
+
+
+    return TEMPLATES.TemplateResponse("ecommerce/template.html", {
+        "request" : request,
+        "product": product,
+        "config" : settings
         })
 
 
