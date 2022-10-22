@@ -89,7 +89,7 @@ $ uvicorn src.app:app --reload
   
 <br />
 
-> Sample product page generated for [Air ZOOM Pegasus](./src/templates/products/air-zoom-pegasus.json), assets loaded from [here](./src/static/products/product-air-zoom-pegasus)
+> Sample product page generated for [Air ZOOM Pegasus](./src/templates/products/air-zoom-pegasus.json), assets loaded from [here](./src/static/products/air-zoom-pegasus)
 
 <br />
 
