@@ -11,7 +11,7 @@ Open-source mini `eCommerce` project that loads the products from `JSON` files s
 | ✅ | **FastAPI** | For `backend logic` |
 | ✅ | **Stripe** | `Payment processor` |
 | ✅ | **[Soft UI Design](https://www.creative-tim.com/product/soft-ui-design-system?AFFILIATE=128200)** | (Free Version) by `Creative-Tim` |
-| ✅ | **JSON** | `Products definition` - see [sample](./src/templates/products/product-air-zoom-pegasus.json) |
+| ✅ | **JSON** | `Products definition` - see [sample](./src/templates/products/air-zoom-pegasus.json) |
 | ✅ | Automatic Products Discovery | Source DIR: [templates\products](./src/templates/products) |
 | ❌ | **Deployment** | `Docker` & Pages Compression |
 | ❌ | **CI/CD** | Render Deployment Platform |
