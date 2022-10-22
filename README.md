@@ -18,7 +18,11 @@ Open-source mini `eCommerce` project that loads the products from `JSON` files s
 
 <br />
 
-## ✨ Start the app in `Docker`
+![FastAPI & Stripe mini eCommerce - Open-Source Starter provided by AppSeed.](https://user-images.githubusercontent.com/51070104/197350325-609fe951-fe54-4276-9380-9d403460a8d0.png)
+
+<br />
+
+## ✨ Quick start in `Docker`
 
 > 👉 **Step 1** - Download the code from the GH repository (using `GIT`) 
 
