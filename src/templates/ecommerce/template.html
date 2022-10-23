@@ -32,7 +32,7 @@
             <span style="display:none" id="product_slug">{{ product.slug }}</span>
             
 
-            {% if config.STRIPE_IS_ACTIVE %}
+            {% if config.stripe_is_active %}
 
               <a id="submitBtn" href="#" class="btn bg-white text-dark">
                 Buy Product - ${{ product.price }}

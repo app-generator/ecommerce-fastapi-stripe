@@ -18,6 +18,7 @@ class Settings(BaseSettings):
         if self.stripe_secret_key and self.stripe_publishable_key:
             self.stripe_is_active = True
 
+
     class Config:
         env_file = "./.env"
 

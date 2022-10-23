@@ -8,9 +8,10 @@ from src.routers.products import router as product_router
 
 
 if (settings.debug=='True'):
-    pass
-
-app = FastAPI(debug=True, reload=True)
+    app = FastAPI(debug=True, reload=True)
+else:
+    app = FastAPI()
+    
 
 app.mount("/static", StaticFiles(directory="src/static"), name="static")
 
