@@ -66,7 +66,6 @@ async def product_info(product_slug: str, request: Request, response_model=HTMLR
 
     product = response.json()
 
-    print (settings)
     return TEMPLATES.TemplateResponse("ecommerce/template.html", {
         "request" : request,
         "product": product,
