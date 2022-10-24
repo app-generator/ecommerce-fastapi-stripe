@@ -4,6 +4,8 @@ from fastapi.templating import Jinja2Templates
 from pathlib import Path
 from src.config import settings
 import http3
+import stripe
+
 
 from src import app, schemas
 
@@ -14,10 +16,18 @@ router = APIRouter(
 BASE_PATH = Path(__file__).resolve().parent
 TEMPLATES = Jinja2Templates(directory=str(BASE_PATH / "../templates"))
 
+# Stripe Credentials
+stripe_keys = {
+    "secret_key"     : settings.stripe_secret_key,
+    "publishable_key": settings.stripe_publishable_key,
+    "endpoint_secret": settings.stripe_secret_key
+}
+
+stripe.api_key = stripe_keys["secret_key"]
+
 @router.get("/", status_code=status.HTTP_200_OK)
 async def index(request: Request, response_model=HTMLResponse):
     return TEMPLATES.TemplateResponse("pages/index.html", {"request" : request})
-
 
 @router.get("/products/", status_code=status.HTTP_200_OK)
 async def products_index(request: Request, response_model=HTMLResponse):
@@ -49,8 +59,6 @@ async def products_index(request: Request, response_model=HTMLResponse):
         "products": products,
         })
 
-
-
 @router.get("/products/{product_slug}", status_code=status.HTTP_200_OK)
 async def product_info(product_slug: str, request: Request, response_model=HTMLResponse):
     base_url = request.base_url
@@ -72,4 +80,74 @@ async def product_info(product_slug: str, request: Request, response_model=HTMLR
         "config" : settings
         })
 
+@router.get("/config")
+def get_publishable_key():
+    stripe_config = {"publicKey" : stripe_keys["publishable_key"]}
+    return stripe_config
 
+@router.get("/success")
+def success(request: Request):
+    return TEMPLATES.TemplateResponse("ecommerce/payment-success.html", {
+        "request" : request,
+        "config" : settings
+        })
+
+@router.get("/cancelled")
+def cancelled(request: Request):
+    return TEMPLATES.TemplateResponse("ecommerce/payment-cancelled.html", {
+        "request" : request,
+        "config" : settings
+        })
+
+
+@router.get("/create-checkout-session/{path}/")
+async def create_checkout_session(path, request: Request):
+    base_url = request.base_url
+    product_url = app.product_router.url_path_for("get_product_by_slug", slug=path)
+    request_url = base_url.__str__() + product_url.__str__()[1:]
+
+    http3client = http3.AsyncClient()
+    response = await http3client.get(request_url)
+
+    product = response.json()
+
+
+    domain_url = settings.server_address
+    stripe.api_key = stripe_keys["secret_key"]
+
+    print(product)
+
+    try:
+        # Create new Checkout Session for the order
+        # Other optional params include:
+        # [billing_address_collection] - to display billing address details on the page
+        # [customer] - if you have an existing Stripe Customer ID
+        # [payment_intent_data] - lets capture the payment later
+        # [customer_email] - lets you prefill the email input in the form
+        # For full details see https:#stripe.com/docs/api/checkout/sessions/create
+
+        # ?session_id={CHECKOUT_SESSION_ID} means the redirect will have the session ID set as a query param
+
+        print (request.query_params)
+
+        checkout_session = stripe.checkout.Session.create(
+            success_url=domain_url + "success?session_id={CHECKOUT_SESSION_ID}",
+            cancel_url=domain_url + "cancelled",
+            # success_url=app.ui_router.url_path_for('success')+'?success?session_id={CHECKOUT_SESSION_ID}',
+            # cancel_url=app.ui_router.url_path_for('cancelled'),
+            payment_method_types=["card"],
+            mode="payment",
+            lineItems=[
+                {
+                    "name": product.name,
+                    "quantity": 1,
+                    "currency": 'usd',
+                    "amount": product.price * 100,
+                }
+            ]
+        )
+        print (checkout_session)
+        return ({"sessionId": checkout_session["id"]})
+    except Exception as e:
+        return 'error', 403
+        # return jsonify(error=str(e)), 403
