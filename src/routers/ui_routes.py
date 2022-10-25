@@ -115,8 +115,6 @@ async def create_checkout_session(path, request: Request):
     domain_url = settings.server_address
     stripe.api_key = stripe_keys["secret_key"]
 
-    print(product)
-
     try:
         # Create new Checkout Session for the order
         # Other optional params include:
@@ -149,5 +147,7 @@ async def create_checkout_session(path, request: Request):
         print (checkout_session)
         return ({"sessionId": checkout_session["id"]})
     except Exception as e:
+        print (e)
         return 'error', 403
+        
         # return jsonify(error=str(e)), 403
