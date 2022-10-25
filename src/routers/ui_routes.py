@@ -1,4 +1,4 @@
-from fastapi import APIRouter, Request, status
+from fastapi import APIRouter, Request, status, HTTPException
 from fastapi.responses import HTMLResponse, RedirectResponse
 from fastapi.templating import Jinja2Templates
 from pathlib import Path
@@ -126,13 +126,10 @@ async def create_checkout_session(path, request: Request):
 
         # ?session_id={CHECKOUT_SESSION_ID} means the redirect will have the session ID set as a query param
 
-        # print (request.query_params)
 
         checkout_session = stripe.checkout.Session.create(
             success_url=domain_url + "success?session_id={CHECKOUT_SESSION_ID}",
             cancel_url=domain_url + "cancelled",
-            # success_url=app.ui_router.url_path_for('success')+'?success?session_id={CHECKOUT_SESSION_ID}',
-            # cancel_url=app.ui_router.url_path_for('cancelled'),
             payment_method_types=["card"],
             mode="payment",
             line_items=[
@@ -146,7 +143,5 @@ async def create_checkout_session(path, request: Request):
         )
         return ({"sessionId": checkout_session["id"]})
     except Exception as e:
-        print (e)
-        return 'error', 403
+        raise HTTPException(status_code=status.HTTP_403_FORBIDDEN, detail='There was an error with the stripe session')
         
-        # return jsonify(error=str(e)), 403
