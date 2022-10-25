@@ -126,7 +126,7 @@ async def create_checkout_session(path, request: Request):
 
         # ?session_id={CHECKOUT_SESSION_ID} means the redirect will have the session ID set as a query param
 
-        print (request.query_params)
+        # print (request.query_params)
 
         checkout_session = stripe.checkout.Session.create(
             success_url=domain_url + "success?session_id={CHECKOUT_SESSION_ID}",
@@ -135,16 +135,15 @@ async def create_checkout_session(path, request: Request):
             # cancel_url=app.ui_router.url_path_for('cancelled'),
             payment_method_types=["card"],
             mode="payment",
-            lineItems=[
+            line_items=[
                 {
-                    "name": product.name,
+                    "name": product['name'],
                     "quantity": 1,
                     "currency": 'usd',
-                    "amount": product.price * 100,
+                    "amount": product['price'] * 100,
                 }
             ]
         )
-        print (checkout_session)
         return ({"sessionId": checkout_session["id"]})
     except Exception as e:
         print (e)
