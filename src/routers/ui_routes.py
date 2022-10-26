@@ -1,3 +1,8 @@
+# -*- encoding: utf-8 -*-
+"""
+Copyright (c) 2019 - present AppSeed.us
+"""
+
 from fastapi import APIRouter, Request, status, HTTPException
 from fastapi.responses import HTMLResponse, RedirectResponse
 from fastapi.templating import Jinja2Templates
@@ -124,8 +129,7 @@ async def create_checkout_session(path, request: Request):
         # [customer_email] - lets you prefill the email input in the form
         # For full details see https:#stripe.com/docs/api/checkout/sessions/create
 
-        # ?session_id={CHECKOUT_SESSION_ID} means the redirect will have the session ID set as a query param
-
+        # ?session_id={CHECKOUT_SESSION_ID} means the redirect will have the session ID set as a query param 
 
         checkout_session = stripe.checkout.Session.create(
             success_url=domain_url + "success?session_id={CHECKOUT_SESSION_ID}",

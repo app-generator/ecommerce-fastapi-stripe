@@ -1,3 +1,8 @@
+# -*- encoding: utf-8 -*-
+"""
+Copyright (c) 2019 - present AppSeed.us
+"""
+
 from fastapi import APIRouter, HTTPException, status
 from typing import List
 
@@ -33,21 +38,4 @@ async def get_product_by_slug(slug: str):
             return product
 
     raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail="Product was not found")
-
-
-# @router.get("/{id}", response_model=schemas.Product)
-# async def get_product(id: int):
-
-#     products = get_local_products()
-
-#     if not products:
-#         raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail="Product was not found")
-    
-#     try:
-#         product = products[id]
-#     except IndexError:
-#         raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail="Product was not found")
-
-#     return product
-
 

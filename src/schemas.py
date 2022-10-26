@@ -1,3 +1,8 @@
+# -*- encoding: utf-8 -*-
+"""
+Copyright (c) 2019 - present AppSeed.us
+"""
+
 from pydantic import BaseModel
 
 class ProductBase(BaseModel):
@@ -13,4 +18,3 @@ class Product(ProductBase):
     slug: str
     class Config:
         orm_mode = True
-

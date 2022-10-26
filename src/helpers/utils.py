@@ -30,7 +30,3 @@ def get_local_products():
 
     return product_dicts
 
-
-if __name__=='__main__':
-    products = get_local_products()
-    print (products)
