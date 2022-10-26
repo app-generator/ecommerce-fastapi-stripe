@@ -7,4 +7,4 @@
   - STRIPE secrets not provided 
 - Stripe v3, Credentials loaded from `env`
 - Products loaded from `templates` directory
-- Soft UI Design System [v1.0.1](https://github.com/creativetimofficial/soft-ui-design-system/releases)
+- Soft UI Design System [v1.0.1](https://www.creative-tim.com/product/soft-ui-design-system?AFFILIATE=128200)
