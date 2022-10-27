@@ -31,7 +31,7 @@ The process is basically the usual set up for any Python app: `environment` set 
 
 <br />
 
-> 👉 **Step 1** - Download the code from the GH repository (using `GIT`) 
+> 👉 **Step 1** - `Download the code` from the GH repository (using `GIT`) 
 
 ```bash
 $ git clone https://github.com/app-generator/ecommerce-fastapi-stripe.git
@@ -47,7 +47,7 @@ $ cd ecommerce-fastapi-stripe
 
 <br />
 
-> 👉 **Step 3** - Install dependencies
+> 👉 **Step 3** - `Install dependencies`
 
 ```bash
 $ virtualenv env
@@ -57,7 +57,7 @@ $ pip install -r requirements.txt
 
 <br />
 
-> 👉 **Step 4** - Start the App
+> 👉 **Step 4** - `Start the App`
 
 ```bash
 $ uvicorn src.app:app --reload
