@@ -1,4 +1,4 @@
-# FastAPI & Stripe `Mini eCommerce`
+# [FastAPI & Stripe](https://github.com/app-generator/ecommerce-fastapi-stripe) `Mini eCommerce`
 
 Open-source mini `eCommerce` project that loads the products from `JSON` files saved in the `templates directory` (no database required) and uses a decent UI for page styling - Powered by **FastAPI**.
 
@@ -105,4 +105,4 @@ $ uvicorn src.app:app --reload
 <br />
 
 ---
-FastAPI & Stripe `Mini eCommerce` - Free sample provided by [AppSeed](https://appseed.us).
+[FastAPI & Stripe](https://github.com/app-generator/ecommerce-fastapi-stripe) `Mini eCommerce` - Free sample provided by [AppSeed](https://appseed.us).
