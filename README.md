@@ -27,14 +27,14 @@ Open-source mini `eCommerce` project that loads the products from `JSON` files s
 
 ## ✨ Manual Build
 
-> 👉 Rename `env.sample` to `.env` and provide the Stripe Secrets
+> 👉 **Step 1** - Rename `env.sample` to `.env` and provide the Stripe Secrets
 
 - Edit `STRIPE_SECRET_KEY` - provided by Stripe Platform
 - Edit `STRIPE_PUBLISHABLE_KEY` - provided by Stripe Platform
 
 <br />
 
-> 👉 Install dependencies
+> 👉 **Step 2** - Install dependencies
 
 ```bash
 $ virtualenv env
@@ -44,11 +44,13 @@ $ pip install -r requirements.txt
 
 <br />
 
-> 👉 Start the App
+> 👉 **Step 3** - Start the App
 
 ```bash
 $ uvicorn src.app:app --reload
 ```
+
+Visit `http://localhost:8000` in your browser. To use another port, use `--port 8099` directive.
 
 <br />
 
