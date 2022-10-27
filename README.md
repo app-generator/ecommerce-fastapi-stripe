@@ -50,7 +50,7 @@ $ pip install -r requirements.txt
 $ uvicorn src.app:app --reload
 ```
 
-Visit `http://localhost:8000` in your browser. To use another port, use `--port 8099` directive.
+Visit `http://localhost:8000` in your browser. For another port, use `--port 8099` directive.
 
 <br />
 
