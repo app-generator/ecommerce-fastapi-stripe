@@ -27,8 +27,8 @@ Open-source mini `eCommerce` project that loads the products from `JSON` files s
 > 👉 **Step 1** - Download the code from the GH repository (using `GIT`) 
 
 ```bash
-$ git clone https://github.com/app-generator/sample-fastapi-stripe.git
-$ cd sample-fastapi-stripe
+$ git clone https://github.com/app-generator/ecommerce-fastapi-stripe.git
+$ cd ecommerce-fastapi-stripe
 ```
 
 <br />
