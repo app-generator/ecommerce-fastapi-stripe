@@ -3,11 +3,11 @@
 Open-source mini `eCommerce` project that loads the products from `JSON` files saved in the `templates directory` (no database required) and uses a decent UI for page styling - Powered by **FastAPI**.
 <br />
 
-> [FastAPI & Stripe eCommerce](https://youtu.be/5kCE41duksk) - `Video Presentation`
+> 👉 [FastAPI & Stripe eCommerce](https://youtu.be/5kCE41duksk) - `Video Presentation`
 
 <br />
 
-> Roadmap & Features 
+### Roadmap & Features 
 
 | Status | Item | info | 
 | --- | --- | --- |
