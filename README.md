@@ -27,6 +27,8 @@ Open-source mini `eCommerce` project that loads the products from `JSON` files s
 
 ## ✨ Manual Build
 
+The process is basically the usual set up for any Python app: `environment` set up, `dependencies` install, and `bootstrap`. 
+
 > 👉 **Step 1** - Rename `env.sample` to `.env` and provide the Stripe Secrets
 
 - Edit `STRIPE_SECRET_KEY` - provided by Stripe Platform
