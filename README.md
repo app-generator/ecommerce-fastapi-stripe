@@ -1,4 +1,4 @@
-# [FastAPI & Stripe](https://github.com/app-generator/ecommerce-fastapi-stripe) `Mini eCommerce`
+# [FastAPI & Stripe](https://blog.appseed.us/fastapi-stripe-free-ecommerce/) `Mini eCommerce`
 
 Open-source mini `eCommerce` project that loads the products from `JSON` files saved in the `templates directory` (no database required) and uses a decent UI for page styling - Powered by **FastAPI**.
 <br />
@@ -92,4 +92,4 @@ Visit `http://localhost:8000` in your browser. For another port, use `--port 809
 <br />
 
 ---
-[FastAPI & Stripe](https://github.com/app-generator/ecommerce-fastapi-stripe) `Mini eCommerce` - Free sample provided by [AppSeed](https://appseed.us).
+[FastAPI & Stripe](https://blog.appseed.us/fastapi-stripe-free-ecommerce/) `Mini eCommerce` - Free sample provided by [AppSeed](https://appseed.us).
