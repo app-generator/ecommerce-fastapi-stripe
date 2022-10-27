@@ -1,6 +1,9 @@
 # [FastAPI & Stripe](https://github.com/app-generator/ecommerce-fastapi-stripe) `Mini eCommerce`
 
 Open-source mini `eCommerce` project that loads the products from `JSON` files saved in the `templates directory` (no database required) and uses a decent UI for page styling - Powered by **FastAPI**.
+<br />
+
+> [FastAPI & Stripe eCommerce](https://youtu.be/5kCE41duksk) - `Video Presentation`
 
 <br />
 
@@ -41,8 +44,7 @@ $ docker-compose up --build
 
 Visit `http://localhost:5085` in your browser. The app should be up & running.
 
-<br />
-
+<br /> 
 
 ## Manual Build
 
