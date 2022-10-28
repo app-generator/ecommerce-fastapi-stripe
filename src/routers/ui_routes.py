@@ -62,7 +62,7 @@ async def products_index(request: Request, response_model=HTMLResponse):
         "request" : request,
         "featured_product" : featured_product,
         "products": products,
-        })
+    })
 
 @router.get("/products/{product_slug}", status_code=status.HTTP_200_OK)
 async def product_info(product_slug: str, request: Request, response_model=HTMLResponse):
@@ -83,7 +83,7 @@ async def product_info(product_slug: str, request: Request, response_model=HTMLR
         "request" : request,
         "product": product,
         "config" : settings
-        })
+    })
 
 @router.get("/config")
 def get_publishable_key():
@@ -95,14 +95,14 @@ def success(request: Request):
     return TEMPLATES.TemplateResponse("ecommerce/payment-success.html", {
         "request" : request,
         "config" : settings
-        })
+    })
 
 @router.get("/cancelled")
 def cancelled(request: Request):
     return TEMPLATES.TemplateResponse("ecommerce/payment-cancelled.html", {
         "request" : request,
         "config" : settings
-        })
+    })
 
 
 @router.get("/create-checkout-session/{path}/")
@@ -155,14 +155,14 @@ def success(request: Request):
     return TEMPLATES.TemplateResponse("ecommerce/payment-success.html", {
         "request" : request,
         "config" : settings
-        })
+    })
 
 @router.get("/presentation")
 def presentation(request: Request):
     return TEMPLATES.TemplateResponse("pages/presentation.html", {
         "request" : request,
         "config" : settings
-        })
+    })
 
 
 @router.get("/page-about-us")
@@ -170,7 +170,7 @@ def page_about_us(request: Request):
     return TEMPLATES.TemplateResponse("pages/page-about-us.html", {
         "request" : request,
         "config" : settings
-        })
+    })
 
 
 @router.get('/page-contact-us')
@@ -178,53 +178,102 @@ def page_contact_us(request: Request):
     return TEMPLATES.TemplateResponse("pages/page-contact-us.html", {
         "request" : request,
         "config" : settings
-        })
+    })
 
 @router.get('/page-author')
 def page_author(request: Request):
     return TEMPLATES.TemplateResponse("pages/page-author.html", {
         "request" : request,
         "config" : settings
-        })
+    })
 
 @router.get('/page-sign-in')
 def page_sign_in(request: Request):
     return TEMPLATES.TemplateResponse("pages/page-sign-in.html", {
         "request" : request,
         "config" : settings
-        })
+    })
 
 @router.get('/page-sign-up')
 def page_sign_up(request: Request):
     return TEMPLATES.TemplateResponse("pages/page-sign-up.html", {
         "request" : request,
         "config" : settings
-        })
+    })
 
 @router.get('/page-404')
 def page_404(request: Request):
     return TEMPLATES.TemplateResponse("pages/page-404.html", {
         "request" : request,
         "config" : settings
-        })
+    })
 
 @router.get('/page-sections-hero-sections')
 def page_sections_hero_sections(request: Request):
     return TEMPLATES.TemplateResponse("pages/page-sections-hero-sections.html", {
         "request" : request,
         "config" : settings
-        })
+    })
 
 @router.get('/page-sections-features')
 def page_sections_features(request: Request):
     return TEMPLATES.TemplateResponse("pages/page-sections-features.html", {
         "request" : request,
         "config" : settings
-        })
+    })
 
 @router.get('/navigation-navbars')
 def navigation_navbars(request: Request):
     return TEMPLATES.TemplateResponse("pages/navigation-navbars.html", {
         "request" : request,
         "config" : settings
-        })
+    })
+
+@router.get('/navigation-nav-tabs')
+def navigation_nav_tabs(request: Request):
+    return TEMPLATES.TemplateResponse("pages/navigation-nav-tabs.html", {
+        "request" : request,
+        "config" : settings
+    })
+
+@router.get('/navigation-pagination')
+def navigation_pagination(request: Request):
+    return TEMPLATES.TemplateResponse("pages/navigation-pagination.html", {
+        "request" : request,
+        "config" : settings
+    })
+
+@router.get('/input-areas-inputs')
+def input_areas_inputs(request: Request):
+    return TEMPLATES.TemplateResponse("pages/input-areas-inputs.html", {
+        "request" : request,
+        "config" : settings
+    })
+
+@router.get('/input-areas-forms')
+def input_areas_forms(request: Request):
+    return TEMPLATES.TemplateResponse("pages/input-areas-forms.html", {
+        "request" : request,
+        "config" : settings
+    })
+
+@router.get('/attention-catchers-alerts')
+def attention_catchers_alerts(request: Request):
+    return TEMPLATES.TemplateResponse("pages/attention-catchers-alerts.html", {
+        "request" : request,
+        "config" : settings
+    })
+
+@router.get('/attention-catchers-modals')
+def attention_catchers_modals(request: Request):
+    return TEMPLATES.TemplateResponse("pages/attention-catchers-modals.html", {
+        "request" : request,
+        "config" : settings
+    })
+
+@router.get('/attention-catchers-tooltips-popovers')
+def attention_catchers_tooltips_popovers(request: Request):
+    return TEMPLATES.TemplateResponse("pages/attention-catchers-tooltips-popovers.html", {
+        "request" : request,
+        "config" : settings
+    })
