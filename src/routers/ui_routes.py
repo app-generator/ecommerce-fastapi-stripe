@@ -149,3 +149,82 @@ async def create_checkout_session(path, request: Request):
     except Exception as e:
         raise HTTPException(status_code=status.HTTP_403_FORBIDDEN, detail='There was an error with the stripe session')
         
+
+@router.get("/success")
+def success(request: Request):
+    return TEMPLATES.TemplateResponse("ecommerce/payment-success.html", {
+        "request" : request,
+        "config" : settings
+        })
+
+@router.get("/presentation")
+def presentation(request: Request):
+    return TEMPLATES.TemplateResponse("pages/presentation.html", {
+        "request" : request,
+        "config" : settings
+        })
+
+
+@router.get("/page-about-us")
+def page_about_us(request: Request):
+    return TEMPLATES.TemplateResponse("pages/page-about-us.html", {
+        "request" : request,
+        "config" : settings
+        })
+
+
+@router.get('/page-contact-us')
+def page_contact_us(request: Request):
+    return TEMPLATES.TemplateResponse("pages/page-contact-us.html", {
+        "request" : request,
+        "config" : settings
+        })
+
+@router.get('/page-author')
+def page_author(request: Request):
+    return TEMPLATES.TemplateResponse("pages/page-author.html", {
+        "request" : request,
+        "config" : settings
+        })
+
+@router.get('/page-sign-in')
+def page_sign_in(request: Request):
+    return TEMPLATES.TemplateResponse("pages/page-sign-in.html", {
+        "request" : request,
+        "config" : settings
+        })
+
+@router.get('/page-sign-up')
+def page_sign_up(request: Request):
+    return TEMPLATES.TemplateResponse("pages/page-sign-up.html", {
+        "request" : request,
+        "config" : settings
+        })
+
+@router.get('/page-404')
+def page_404(request: Request):
+    return TEMPLATES.TemplateResponse("pages/page-404.html", {
+        "request" : request,
+        "config" : settings
+        })
+
+@router.get('/page-sections-hero-sections')
+def page_sections_hero_sections(request: Request):
+    return TEMPLATES.TemplateResponse("pages/page-sections-hero-sections.html", {
+        "request" : request,
+        "config" : settings
+        })
+
+@router.get('/page-sections-features')
+def page_sections_features(request: Request):
+    return TEMPLATES.TemplateResponse("pages/page-sections-features.html", {
+        "request" : request,
+        "config" : settings
+        })
+
+@router.get('/navigation-navbars')
+def navigation_navbars(request: Request):
+    return TEMPLATES.TemplateResponse("pages/navigation-navbars.html", {
+        "request" : request,
+        "config" : settings
+        })
