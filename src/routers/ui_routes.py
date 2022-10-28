@@ -277,3 +277,59 @@ def attention_catchers_tooltips_popovers(request: Request):
         "request" : request,
         "config" : settings
     })
+
+@router.get('/elements-buttons')
+def elements_buttons(request: Request):
+    return TEMPLATES.TemplateResponse("pages/elements-buttons.html", {
+        "request" : request,
+        "config" : settings
+    })
+
+@router.get('/elements-avatars')
+def elements_avatars(request: Request):
+    return TEMPLATES.TemplateResponse("pages/elements-avatars.html", {
+        "request" : request,
+        "config" : settings
+    })
+
+@router.get('/elements-dropdowns')
+def elements_dropdowns(request: Request):
+    return TEMPLATES.TemplateResponse("pages/elements-dropdowns.html", {
+        "request" : request,
+        "config" : settings
+    })
+
+@router.get('/elements-toggles')
+def elements_toggles(request: Request):
+    return TEMPLATES.TemplateResponse("pages/elements-toggles.html", {
+        "request" : request,
+        "config" : settings
+    })
+
+@router.get('/elements-breadcrumbs')
+def elements_breadcrumbs(request: Request):
+    return TEMPLATES.TemplateResponse("pages/elements-breadcrumbs.html", {
+        "request" : request,
+        "config" : settings
+    })
+
+@router.get('/elements-badges')
+def elements_badges(request: Request):
+    return TEMPLATES.TemplateResponse("pages/elements-badges.html", {
+        "request" : request,
+        "config" : settings
+    })
+
+@router.get('/elements-typography')
+def elements_typography(request: Request):
+    return TEMPLATES.TemplateResponse("pages/elements-typography.html", {
+        "request" : request,
+        "config" : settings
+    })
+
+@router.get('/elements-progress-bars')
+def elements_progress_bars(request: Request):
+    return TEMPLATES.TemplateResponse("pages/elements-progress-bars.html", {
+        "request" : request,
+        "config" : settings
+    })
