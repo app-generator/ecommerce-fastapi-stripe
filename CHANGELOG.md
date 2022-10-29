@@ -1,5 +1,11 @@
 # Change Log
 
+## [1.0.1] 2022-10-29
+### Improvements
+
+- Fix `Docker`
+- Fix Navigation links
+
 ## [1.0.0] 2022-10-26
 ### Minimal Stable Version
 

@@ -16,12 +16,33 @@ Open-source mini `eCommerce` project that loads the products from `JSON` files s
 | ✅ | **[Soft UI Design](https://www.creative-tim.com/product/soft-ui-design-system?AFFILIATE=128200)** | (Free Version) by `Creative-Tim` |
 | ✅ | **JSON** | `Products definition` - see [sample](./src/templates/products/air-zoom-pegasus.json) |
 | ✅ | Automatic Products Discovery | Source DIR: [templates\products](./src/templates/products) |
-| ❌ | **Deployment** | `Docker` & Pages Compression |
+| ✅ | **Deployment** | `Docker` |
 | ❌ | **CI/CD** | Render Deployment Platform |
 
 <br />
 
 ![FastAPI & Stripe mini eCommerce - Open-Source Starter provided by AppSeed.](https://user-images.githubusercontent.com/51070104/197350325-609fe951-fe54-4276-9380-9d403460a8d0.png)
+
+<br />
+
+## ✨ Quick Start in `Docker`
+
+> 👉 **Step 1** - Download the code from the GH repository (using `GIT`) 
+
+```bash
+$ git clone https://github.com/app-generator/ecommerce-fastapi-stripe.git
+$ cd ecommerce-fastapi-stripe
+```
+
+<br />
+
+> 👉 **Step 2** - Start the APP in `Docker`
+
+```bash
+$ docker-compose up --build 
+```
+
+Visit `http://localhost:5085` in your browser. The app should be up & running.
 
 <br />
 
