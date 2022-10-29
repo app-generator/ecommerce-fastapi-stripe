@@ -1,13 +1,10 @@
 # [FastAPI & Stripe](https://blog.appseed.us/fastapi-stripe-free-ecommerce/) `Mini eCommerce`
 
 Open-source mini `eCommerce` project that loads the products from `JSON` files saved in the `templates directory` (no database required) and uses a decent UI for page styling - Powered by **[FastAPI & Stripe](https://blog.appseed.us/fastapi-stripe-free-ecommerce/)**.
-<br />
-
-> 👉 [FastAPI & Stripe eCommerce](https://youtu.be/5kCE41duksk) - `Video Presentation`
 
 <br />
 
-### Roadmap & Features 
+> Features 
 
 | Status | Item | info | 
 | --- | --- | --- |
@@ -21,7 +18,9 @@ Open-source mini `eCommerce` project that loads the products from `JSON` files s
 
 <br />
 
-![FastAPI & Stripe mini eCommerce - Open-Source Starter provided by AppSeed.](https://user-images.githubusercontent.com/51070104/197350325-609fe951-fe54-4276-9380-9d403460a8d0.png)
+## ✨ Video Presentation
+
+https://user-images.githubusercontent.com/51070104/198817800-897b755b-7196-4e0b-81cc-1165dcb44dcc.mp4
 
 <br />
 
@@ -43,6 +42,10 @@ $ docker-compose up --build
 ```
 
 Visit `http://localhost:5085` in your browser. The app should be up & running.
+
+<br />
+
+![FastAPI & Stripe mini eCommerce - Open-Source Starter provided by AppSeed.](https://user-images.githubusercontent.com/51070104/197350325-609fe951-fe54-4276-9380-9d403460a8d0.png)
 
 <br />
 
