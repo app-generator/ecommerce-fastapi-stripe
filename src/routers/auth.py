@@ -1,5 +1,6 @@
 import stripe
 from fastapi import APIRouter, HTTPException, status
+from fastapi.responses import RedirectResponse
 from src.config import settings
 
 
@@ -19,15 +20,20 @@ stripe.api_key = stripe_keys["secret_key"]
 
 @router.get("/login")
 def authorize_stripe():
+    client_id = 'ca_FkyHCg7X8mlvCUdMDao4mMxagUfhIwXb'
+    base_url = f'https://connect.stripe.com/oauth/authorize?response_type=code&client_id={client_id}&scope=read_write'
 
-    response = stripe.OAuth.token(
-        grant_type='authorization_code',
-        code='ac_MkQOWO8bHm7M3bODX7zVLZXVoNuIqz1M',
-    )
+    redirect = RedirectResponse(url=base_url)
+    return redirect
 
-    account_id = response['stripe_user_id']
+    # response = stripe.OAuth.token(
+    #     grant_type='authorization_code',
+    #     code='ac_MkQOWO8bHm7M3bODX7zVLZXVoNuIqz1M',
+    # )
 
-    return {'hip' : account_id}
+    # account_id = response['stripe_user_id']
+
+    # return {'hip' : account_id}
 
 
 @router.get("/logout")
