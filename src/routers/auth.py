@@ -29,8 +29,6 @@ def stripe_login(request: Request):
 
     redirect = RedirectResponse(url=stripe_login_url)
 
-    stripe.api_key = stripe_keys["secret_key"]
-
     return redirect
 
 
@@ -38,16 +36,17 @@ def stripe_login(request: Request):
 @router.get("/login")
 def authorize_stripe(request: Request):
     authorization_code = request.query_params.get('authorization_code')
-    # response = stripe.OAuth.token(
-    #     grant_type='authorization_code',
-    #     code='ac_MkQOWO8bHm7M3bODX7zVLZXVoNuIqz1M',
-    # )
 
-    # account_id = response['stripe_user_id']
+    try:
+        response = stripe.OAuth.token(
+            grant_type='authorization_code',
+            code=authorization_code,
+        )
 
-    return {'hip' : 'hop'}
-    
-
+        account_id = response['stripe_user_id']
+        return {'account_id':account_id}
+    except:
+        raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail="Product was not found")
 
 @router.get("/logout")
 def deauthorize_stripe():
