@@ -37,7 +37,7 @@ def stripe_login(request: Request):
 
 @router.get("/login")
 def authorize_stripe(request: Request):
-
+    authorization_code = request.query_params.get('authorization_code')
     # response = stripe.OAuth.token(
     #     grant_type='authorization_code',
     #     code='ac_MkQOWO8bHm7M3bODX7zVLZXVoNuIqz1M',
