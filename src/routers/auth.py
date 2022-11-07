@@ -29,6 +29,8 @@ def stripe_login(request: Request):
 
     redirect = RedirectResponse(url=stripe_login_url)
 
+    # stripe.OAuth.authorize_url()
+
     return redirect
 
 
@@ -45,8 +47,9 @@ def authorize_stripe(request: Request):
 
         account_id = response['stripe_user_id']
         return {'account_id':account_id}
-    except:
-        raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail="Product was not found")
+    except Exception as e:
+        print (e)
+        raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail="Something Went Wrong")
 
 @router.get("/logout")
 def deauthorize_stripe():
