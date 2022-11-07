@@ -13,7 +13,8 @@ class Settings(BaseSettings):
     stripe_secret_key: str = None
     stripe_publishable_key: str = None
     stripe_is_active: bool = False
-    
+    stripe_client_id: str = None
+    stripe_oauth_redirect: str = None
 
     def __init__(self):
         super().__init__()
