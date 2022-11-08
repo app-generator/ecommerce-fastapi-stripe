@@ -38,19 +38,18 @@ def authorize_stripe(request: Request):
             grant_type='authorization_code',
             code=authorization_code,
         )
-
         account_id = response['stripe_user_id']
         return {'account_id':account_id}
     except Exception as e:
-        print (e)
         raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail="Missing Authorization Code")
 
 @router.get("/logout")
 def deauthorize_stripe():
-
-    stripe.OAuth.deauthorize(
-        client_id='ca_FkyHCg7X8mlvCUdMDao4mMxagUfhIwXb',
-        stripe_user_id='acct_5qIK6loErW6kNw'
-    )
-
-    return {'hip' : 'hop'}
+    try:
+        stripe.OAuth.deauthorize(
+            client_id=settings.stripe_client_id,
+            stripe_user_id=settings.stripe_secret_key
+        )
+        return 200
+    except Exception as e:
+        raise HTTPException(status_code=status.HTTP_401_UNAUTHORIZED, detail="Missing Authorization Code")
