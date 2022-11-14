@@ -16,7 +16,7 @@ stripe_keys = {
     "endpoint_secret": settings.stripe_secret_key
 }
 
-stripe.api_key = stripe_keys["secret_key"]
+# stripe.api_key = stripe_keys["secret_key"]
 
 @router.get("/stripe_login")
 def stripe_login(request: Request):
@@ -37,19 +37,33 @@ def authorize_stripe(request: Request):
             code=authorization_code,
         )
         
+        stripe_user_id = response['stripe_user_id']
+        refresh_token = response['refresh_token']
         access_token = response['access_token']
-        
-        return {'access_token': access_token}
+
+        redirect = RedirectResponse(url=app.ui_router.url_path_for('products_index'))
+        redirect.status_code = 302
+        redirect.set_cookie('Stripe-Account', access_token)
+        redirect.set_cookie('Stripe-User-ID', stripe_user_id)
+        # redirect.set_cookie('Stripe-U')
+
+        # return {'access_token': access_token}
+        return redirect
+
     except Exception as e:
+        print (e)
         raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail="Missing Authorization Code")
 
 @router.get("/logout")
-def deauthorize_stripe():
+def deauthorize_stripe(request: Request):
     try:
+        stripe_user_id = request.cookies.get('Stripe-User-ID')
         stripe.OAuth.deauthorize(
             client_id=settings.stripe_client_id,
-            stripe_user_id=settings.stripe_secret_key
+            stripe_user_id=stripe_user_id
         )
         return 200
     except Exception as e:
+        print (e)
+        # request.cookies.update()
         raise HTTPException(status_code=status.HTTP_401_UNAUTHORIZED, detail="Missing Authorization Code")
