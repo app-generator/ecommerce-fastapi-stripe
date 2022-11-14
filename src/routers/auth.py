@@ -25,13 +25,18 @@ def stripe_login(request: Request):
 
     stripe_login_url = f'https://connect.stripe.com/oauth/authorize?response_type=code&client_id={settings.stripe_client_id}&scope=read_write&redirect_uri={settings.stripe_oauth_redirect}'
     # stripe_login_url = f'https://connect.stripe.com/oauth/authorize?response_type=code&client_id={settings.stripe_client_id}&scope=read_write'
+
+
+    # stripe_login_url = f'https://connect.stripe.com/oauth/authorize?response_type=code&client_id={settings.stripe_client_id}&scope=read_write'
+    # stripe_login_url = f'https://connect.stripe.com/oauth/authorize?response_type=code&client_id={settings.stripe_client_id}&scope=read_write&redirect_uri=https://sub2.example.com'
+    
     redirect = RedirectResponse(url=stripe_login_url)
 
     return redirect
 
 @router.get("/login")
 def authorize_stripe(request: Request):
-    authorization_code = request.query_params.get('authorization_code')
+    authorization_code = request.query_params.get('code')
 
     try:
         response = stripe.OAuth.token(
