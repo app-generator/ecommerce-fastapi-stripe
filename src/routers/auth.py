@@ -24,12 +24,6 @@ def stripe_login(request: Request):
         raise HTTPException(status_code=status.HTTP_401_UNAUTHORIZED, detail="Missing a Required Credential")
 
     stripe_login_url = f'https://connect.stripe.com/oauth/authorize?response_type=code&client_id={settings.stripe_client_id}&scope=read_write&redirect_uri={settings.stripe_oauth_redirect}'
-    # stripe_login_url = f'https://connect.stripe.com/oauth/authorize?response_type=code&client_id={settings.stripe_client_id}&scope=read_write'
-
-
-    # stripe_login_url = f'https://connect.stripe.com/oauth/authorize?response_type=code&client_id={settings.stripe_client_id}&scope=read_write'
-    # stripe_login_url = f'https://connect.stripe.com/oauth/authorize?response_type=code&client_id={settings.stripe_client_id}&scope=read_write&redirect_uri=https://sub2.example.com'
-    
     redirect = RedirectResponse(url=stripe_login_url)
 
     return redirect
@@ -37,14 +31,15 @@ def stripe_login(request: Request):
 @router.get("/login")
 def authorize_stripe(request: Request):
     authorization_code = request.query_params.get('code')
-
     try:
         response = stripe.OAuth.token(
             grant_type='authorization_code',
             code=authorization_code,
         )
-        account_id = response['stripe_user_id']
-        return {'account_id':account_id}
+        
+        access_token = response['access_token']
+        
+        return {'access_token': access_token}
     except Exception as e:
         raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail="Missing Authorization Code")
 
