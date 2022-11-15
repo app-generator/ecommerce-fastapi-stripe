@@ -29,7 +29,7 @@ stripe_keys = {
     "endpoint_secret": settings.stripe_secret_key
 }
 
-# stripe.api_key = stripe_keys["secret_key"]
+
 
 @router.get("/", status_code=status.HTTP_200_OK)
 async def index(request: Request, response_model=HTMLResponse):
@@ -61,39 +61,38 @@ async def products_index(request: Request, response_model=HTMLResponse):
     access_key = request.cookies.get('Stripe-Account')
 
     if (access_key):
-        print ('here!!!!')
+        # print ('here is where we can determine if local products or stripe products get loaded')
+        stripe.api_key = access_key
+        # stripe.
 
-    stripe.api_key = access_key
-    # stripe.
+        json_data = []
+        products = stripe.Product.list(expand = ['data.default_price'])
+        print ('\n\n')
+        print (products)
+        print ('\n\n')
+        productdict = []
+        for product in products:
+            dict= {}
+            dict['id'] = product['id']
+            dict['name'] = product['name']
+            dict['price'] = product["default_price"]["unit_amount"]/100
+            dict['currency'] = product["default_price"]["currency"]
+            dict['full_description'] = product["description"]
+            dict['info'] = product["description"][0:30]
 
-    json_data = []
-    products = stripe.Product.list(expand = ['data.default_price'])
-    print ('\n\n')
-    print (products)
-    print ('\n\n')
-    productdict = []
-    for product in products:
-        dict= {}
-        dict['id'] = product['id']
-        dict['name'] = product['name']
-        dict['price'] = product["default_price"]["unit_amount"]/100
-        dict['currency'] = product["default_price"]["currency"]
-        dict['full_description'] = product["description"]
-        dict['info'] = product["description"][0:30]
+            for index, image in enumerate(product['images']):
+                dict['img_main'] = image
 
-        for index, image in enumerate(product['images']):
-            dict['img_main'] = image
+            dict['img_card'] = ''
+            dict['img_1'] = ''
+            dict['img_2'] = ''
+            dict['img_3'] = ''
 
-        dict['img_card'] = ''
-        dict['img_1'] = ''
-        dict['img_2'] = ''
-        dict['img_3'] = ''
-
-        productdict.append(dict)
-    
-    for product in productdict:
-        json_product = json.dumps( product, indent=4, separators=(',', ': ') )
-        json_data.append(json_product)
+            productdict.append(dict)
+        
+        for product in productdict:
+            json_product = json.dumps( product, indent=4, separators=(',', ': ') )
+            json_data.append(json_product)
 
     return TEMPLATES.TemplateResponse("ecommerce/index.html", {
         "request" : request,
@@ -155,7 +154,7 @@ async def create_checkout_session(path, request: Request):
 
 
     domain_url = settings.server_address
-    # stripe.api_key = stripe_keys["secret_key"]
+    stripe.api_key = stripe_keys["secret_key"]
 
     try:
         # Create new Checkout Session for the order
