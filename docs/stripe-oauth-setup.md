@@ -20,15 +20,5 @@
 
 1. Visit the page `/auth/stripe_login`.
 2. You will be redirected to Stripe, login or register (note that you cannot select `skip`, this will result in an error).
-3. When you create your account you will automatically be redirected to the `products` page. Local products will no longer be loaded, user products will. You can login to stripe and add products, they will be reflected on the page upon refresh.
-4. You can logout by visiting the page `/auth/logout`. This will restore the local products. 
-
-
-
-How it works(a little description for fellow developers). All of the routes 
-
-
-
-> all steps here (minimal information)
-
-
+3. When you create your account you will automatically be redirected to the `/products` page. Local products will no longer be loaded, user products will. You can login to stripe and add products, they will be reflected on the page upon refresh.
+4. You can logout by visiting the page `/auth/logout`. This will restore the local products.
