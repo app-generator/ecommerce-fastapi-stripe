@@ -2,9 +2,7 @@
 
 Open-source mini `eCommerce` project that loads the products from `JSON` files saved in the `templates directory` (no database required) and uses a decent UI for page styling - Powered by **[FastAPI & Stripe](https://blog.appseed.us/fastapi-stripe-free-ecommerce/)**.
 
-<br />
-
-> Features 
+> Roadmap & Features 
 
 | Status | Item | info | 
 | --- | --- | --- |
@@ -15,6 +13,14 @@ Open-source mini `eCommerce` project that loads the products from `JSON` files s
 | ✅ | Automatic Products Discovery | Source DIR: [templates\products](./src/templates/products) |
 | ✅ | **Deployment** | `Docker` |
 | ❌ | **CI/CD** | Render Deployment Platform |
+
+<br />
+
+## [Black Friday](https://appseed.us/discounts/) - `75%OFF`
+
+> The campaign is active until `30.NOV` and applies to all products and licenses.
+
+[![AppSeed - Black Friday 2022 Campaign, 75% OFF Discount (all products).](https://user-images.githubusercontent.com/51070104/201829599-9fe6bdd7-3f19-46f3-9115-962eeb13bf29.jpg)](https://appseed.us/discounts/)
 
 <br />
 
