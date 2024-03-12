@@ -2,27 +2,34 @@
 
 Open-source mini `eCommerce` project that loads the products from `JSON` files saved in the `templates directory` (no database required) and uses a decent UI for page styling - Powered by **[FastAPI & Stripe](https://blog.appseed.us/fastapi-stripe-free-ecommerce/)**.
 
-> Roadmap & Features 
+<br />
 
-| Status | Item | info | 
-| --- | --- | --- |
-| ✅ | **FastAPI** | For `backend logic` |
-| ✅ | **Stripe** | `Payment processor` |
-| ✅ | **[Soft UI Design](https://www.creative-tim.com/product/soft-ui-design-system?AFFILIATE=128200)** | (Free Version) by `Creative-Tim` |
-| ✅ | **JSON** | `Products definition` - see [sample](./src/templates/products/air-zoom-pegasus.json) |
-| ✅ | Automatic Products Discovery | Source DIR: [templates\products](./src/templates/products) |
-| ✅ | **Deployment** | `Docker` |
-| ❌ | **CI/CD** | Render Deployment Platform |
+## Features
+
+> `Have questions?` Contact **[Support](https://appseed.us/support/)** (Email & Discord) provided by **AppSeed**
+
+| Free Version                          | [PRO Version](https://github.com/app-generator/rocket-ecommerce) - 🛒 **[$99](https://appseed.gumroad.com/l/rocket-ecommerce)** | [Custom Development](https://appseed.us/custom-development/) |  
+| --------------------------------------| --------------------------------------| --------------------------------------|
+| ✓ Stack: **FastAPI, Bootstrap**        | ✅ Stack: **Django, Tailwind**                   | **Everything in PRO**, plus:         |
+| ✓ Stripe                              | ✅ Lifetime Updates, Unlimited Projects          | ✅ **1mo Custom Development**       | 
+| ✓ Minimal Bootstrap 4 Design          | ✅ Stripe                                        | ✅ **Team**: PM, Developer, Tester  |
+| ✓ Automatic Products Discovery        | ✅ Categories, TAGS                              | ✅ Weekly Sprints                   |
+| ✓ No Database                         | ✅ Checkout                                      | ✅ Technical SPECS                  |
+| -                                     | ✅ Discounts Page                                | ✅ Documentation                    |
+| -                                     | ✅ Stripe Products Import                        | ✅ **30 days Delivery Warranty**    |
+| -                                     | ✅ Local Products Customization                   |  -                                   |
+| -                                     | ✅ Analytics                                      |  -                                   |
+| -                                     | ✅ Transactions Tracking                          |  -                                   |
+| -                                     | ✅ Zero Configuration                             |  -                                   |
+| -                                     | ✅ **PRO Support** - [Email & Discord](https://appseed.us/support/) |  -                 |
+| -                                     | ✅ Deployment Assistance                          |  -                                   |
+| -                                     | -                                                 |  -                                   |
+| ------------------------------------  | ------------------------------------              | ------------------------------------|
+| -                                     | 🚀 [LIVE Demo](https://rocket-ecommerce.onrender.com/) | 🛒 `Order`: **[$3,999](https://appseed.gumroad.com/l/rocket-package)** (GUMROAD) |  
 
 <br />
 
-## ✨ Video Presentation
-
-> This video explains how to use the product
-
-<br /> 
-
-https://user-images.githubusercontent.com/51070104/198817800-897b755b-7196-4e0b-81cc-1165dcb44dcc.mp4
+![FastAPI & Stripe mini eCommerce - Open-Source Starter provided by AppSeed.](https://user-images.githubusercontent.com/51070104/197350325-609fe951-fe54-4276-9380-9d403460a8d0.png)
 
 <br />
 
@@ -44,10 +51,6 @@ $ docker-compose up --build
 ```
 
 Visit `http://localhost:5085` in your browser. The app should be up & running.
-
-<br />
-
-![FastAPI & Stripe mini eCommerce - Open-Source Starter provided by AppSeed.](https://user-images.githubusercontent.com/51070104/197350325-609fe951-fe54-4276-9380-9d403460a8d0.png)
 
 <br />
 
