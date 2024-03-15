@@ -10,20 +10,18 @@ Open-source mini `eCommerce` project that loads the products from `JSON` files s
 
 | Free Version                          | [PRO Version](https://github.com/app-generator/rocket-ecommerce) - 🛒 **[$99](https://appseed.gumroad.com/l/rocket-ecommerce)** | [Custom Development](https://appseed.us/custom-development/) |  
 | --------------------------------------| --------------------------------------| --------------------------------------|
-| ✓ Stack: **FastAPI, Bootstrap**        | ✅ Stack: **Django, Tailwind**                   | **Everything in PRO**, plus:         |
-| ✓ Stripe                              | ✅ Lifetime Updates, Unlimited Projects          | ✅ **1mo Custom Development**       | 
-| ✓ Minimal Bootstrap 4 Design          | ✅ Stripe                                        | ✅ **Team**: PM, Developer, Tester  |
-| ✓ Automatic Products Discovery        | ✅ Categories, TAGS                              | ✅ Weekly Sprints                   |
-| ✓ No Database                         | ✅ Checkout                                      | ✅ Technical SPECS                  |
-| -                                     | ✅ Discounts Page                                | ✅ Documentation                    |
-| -                                     | ✅ Stripe Products Import                        | ✅ **30 days Delivery Warranty**    |
-| -                                     | ✅ Local Products Customization                   |  -                                   |
-| -                                     | ✅ Analytics                                      |  -                                   |
-| -                                     | ✅ Transactions Tracking                          |  -                                   |
-| -                                     | ✅ Zero Configuration                             |  -                                   |
-| -                                     | ✅ **PRO Support** - [Email & Discord](https://appseed.us/support/) |  -                 |
-| -                                     | ✅ Deployment Assistance                          |  -                                   |
-| -                                     | -                                                 |  -                                   |
+| ✓ Stack: **fastAPI**, `Bootstrap`     | ✅ Stack: **Django**, `TailwindCSS`              | **Everything in PRO**, plus:         |
+| ✓ Payments: **Stripe**                | ✅ Payments: **Stripe**                          | ✅ **1mo Custom Development**       | 
+| ✓ Minimal Bootstrap Design            | ✅ **Stripe Products Import**                    | ✅ **Team**: PM, Developer, Tester  |
+| ✓ No Database                         | ✅ **Local Products Customization**              | ✅ Weekly Sprints                   |
+| -                                     | ✅ **Categories**, TAGS                          | ✅ Technical SPECS                  |
+| -                                     | ✅ Multi-product **Checkout**                    | ✅ Documentation                    |
+| -                                     | ✅ **Discounts Page**                            | ✅ **30 days Delivery Warranty**    |
+| -                                     | ✅ **Analytics**                                 | -                                    |
+| -                                     | ✅ **Transactions Tracking**                     |  -                                   |
+| -                                     | ✅ **Zero Configuration**                        |  -                                   |
+| -                                     | ✅ **Deployment** Assistance                     |  -                                   |
+| -                                     | ✅ **PRO Support** - [Email & Discord](https://appseed.us/support/) |  -                |
 | ------------------------------------  | ------------------------------------              | ------------------------------------|
 | -                                     | 🚀 [LIVE Demo](https://rocket-ecommerce.onrender.com/) | 🛒 `Order`: **[$3,999](https://appseed.gumroad.com/l/rocket-package)** (GUMROAD) |  
 
