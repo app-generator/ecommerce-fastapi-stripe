@@ -8,7 +8,7 @@
 
 > `Have questions?` Contact **[Support](https://appseed.us/support/)** (Email & Discord) provided by **AppSeed**
 
-| Free Version                          | [PRO Version](https://github.com/app-generator/rocket-ecommerce) - 🛒 **[$49](https://appseed.gumroad.com/l/rocket-ecommerce)** | [Custom Development](https://appseed.us/custom-development/) |  
+| Free Version                          | [Rocket eCommerce PRO](https://appseed.us/product/rocket-ecommerce/django/) | [Custom Development](https://appseed.us/custom-development/) |  
 | --------------------------------------| --------------------------------------| --------------------------------------|
 | ✓ Stack: **fastAPI**, `Bootstrap`     | ✅ Stack: **Django**, `TailwindCSS`              | **Everything in PRO**, plus:         |
 | ✓ Payments: **Stripe**                | ✅ Payments: **Stripe**                          | ✅ **1mo Custom Development**       | 
