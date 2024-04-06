@@ -1,5 +1,11 @@
 # Change Log
 
+## [1.0.5] 2024-04-06
+### Changes
+
+- README Update
+  - [Rocket eCommerce](https://appseed.us/product/rocket-ecommerce/django/) `PRO Version` link
+
 ## [1.0.4] 2024-03-25
 ### Changes
 
