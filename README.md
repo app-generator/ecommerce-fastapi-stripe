@@ -20,7 +20,7 @@
 | -                                     | ✅ **Analytics**                                 | -                                    |
 | -                                     | ✅ **Transactions Tracking**                     |  -                                   |
 | -                                     | ✅ **Zero Configuration**                        |  -                                   |
-| -                                     | ✅ **Deployment** Assistance                     |  -                                   |
+| -                                     | ✅ **FIGMA** Project                             |  -                                   |
 | -                                     | ✅ **PRO Support** - [Email & Discord](https://appseed.us/support/) |  -                |
 | ------------------------------------  | ------------------------------------              | ------------------------------------|
 | -                                     | 🚀 [LIVE Demo](https://rocket-ecommerce.onrender.com/) | 🛒 `Order`: **[$3,999](https://appseed.gumroad.com/l/rocket-package)** (GUMROAD) |  
