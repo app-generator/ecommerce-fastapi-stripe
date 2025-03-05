@@ -1,5 +1,10 @@
 # Change Log
 
+## [1.0.7] 2025-03-05
+### Changes
+
+- Added PRO Version: [Rocket eCommerce](https://app-generator.dev/product/rocket-ecommerce/django/)
+
 ## [1.0.6] 2024-04-06
 ### Changes
 
