@@ -120,12 +120,64 @@ Visit `http://localhost:8000` in your browser. For another port, use `--port 809
 
 <br />
 
-## ✨ Credits & Links
+<br />
 
-- [FastAPI Framework](https://fastapi.tiangolo.com/) - The official website
-- [Stripe Dev Tools](https://stripe.com/docs/development) - official docs
+<div align="center">
+    <a href="https://app-generator.dev/product/rocket-ecommerce/django/">
+        <img src="https://github-production-user-asset-6210df.s3.amazonaws.com/51070104/272178364-cbac6d97-b2dc-4d95-bab6-891f4ee7d84d.png"" width="64" height="64" alt="Rocket Icon">
+    </a>
+    <h1>
+         Go PRO with 
+        <a href="https://app-generator.dev/product/rocket-ecommerce/django/">
+            Rocket eCommerce
+        </a>
+    </h1>
+    <p>
+        <strong>Django</strong> &bull; <strong>TailwindCSS</strong> &bull; <strong>Stripe</strong> &bull; <strong>Analytics</strong> &bull; <strong>Docker</strong> &bull; <strong>CI/CD</strong> &bull; <strong>Lifetime Updates</strong> &bull; <strong>Unlimited Projects</strong>
+    </p>  
+    <h3>     
+        <a target="_blank" href="https://rocket-ecommerce.onrender.com">
+            Demo
+        </a>
+        &nbsp; &bull; &nbsp;
+        <a target="_blank" href="https://app-generator.dev/product/rocket-ecommerce/django/#pricing">
+           Buy License
+        </a>
+    </h3>    
+    <p>
+        <strong>Once authenticated, the ADMIN (superuser) can import the products from Stripe and customize each one locally by adding properties like Images, Tags, Discount, .. etc.</strong>
+        <br /> <br />
+        The product comes with <strong>Docker</strong> and <a href="https://deploypro.dev/" target="_blank">CI/CD Support</a>
+    </p>  
+    <hr />
+</div>
 
 <br />
 
----
-[FastAPI & Stripe](https://blog.appseed.us/fastapi-stripe-free-ecommerce/) `Mini eCommerce` - Free sample provided by [AppSeed](https://appseed.us).
+<div align="center">
+  <img src="https://github.com/user-attachments/assets/3d3e4abc-3a4e-4ef2-8934-d55bc25942db" alt="Rocket eCommerce - Django Starter styled with Tailwind and Flowbite.">
+</div>
+
+<br />
+
+## Features 
+
+| Status | Item | info | 
+| --- | --- | --- |
+| ✅ | Stack | Django, Tailwind, React |
+| ✅ | Payments | Stripe |
+| ✅ | Categories | YES |
+| ✅ | Tags | YES |
+| ✅ | Checkout | YES |
+| ✅ | Discounts Page | YES |
+| ✅ | Products Import | Stripe |
+| ✅ | Products Local Customization | YES |
+| ✅ | Analitycs | Weekly, Monthly, Year `Sales` |
+| ✅ | Transactions Tracking | YES |
+| ✅ | Docker | YES |
+| ✅ | CI/CD | Render |
+| ✅  | Active versioning and [support](https://appseed.us/support/) | [AppSeed](https://appseed.us/) |
+| ✅  | [AWS, DO, Azure Deploy Assistance](https://deploypro.dev/)   | `DeployPRO` |
+
+<br />
+
