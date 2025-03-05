@@ -2,7 +2,7 @@
 
 **Open-source eCommerce Starter** that loads the products from `JSON` files saved in the `templates directory` (no database required) and uses a decent UI for page styling - Powered by **FastAPI & Stripe**.
 
-- [FastAPI mini eCommerce](https://github.com/app-generator/ecommerce-django-stripe) sources (this repo)
+- [FastAPI mini eCommerce](https://github.com/app-generator/ecommerce-fastapi-stripe) sources (this repo)
 - [Rocket eCommerce](https://app-generator.dev/product/rocket-ecommerce/django/) - **PRO Version**
   - ✅ Stripe Integration
   - ✅ Checkout, Discounts Page
