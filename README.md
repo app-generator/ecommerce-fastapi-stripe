@@ -1,8 +1,11 @@
-# FastAPI & Stripe `Mini eCommerce`
+# [FastAPI](https://app-generator.dev/docs/technologies/fastapi/index.html) & Stripe `Mini eCommerce`
 
-**Open-source eCommerce Starter** that loads the products from `JSON` files saved in the `templates directory` (no database required) and uses a decent UI for page styling - Powered by **FastAPI & Stripe**.
+**Open-source eCommerce Starter** that loads the products from `JSON` files saved in the `templates directory` (no database required) and uses a decent UI for page styling - Powered by **[FastAPI](https://app-generator.dev/docs/technologies/fastapi/index.html) & [Stripe](https://app-generator.dev/docs/payment-processors/stripe/index.html)**.
 
 - [FastAPI mini eCommerce](https://github.com/app-generator/ecommerce-fastapi-stripe) sources (this repo)
+- [FastAPI Resources](https://app-generator.dev/docs/technologies/fastapi.html)
+  - [Getting Started with FastAPI](https://app-generator.dev/docs/technologies/fastapi/index.html)
+  - [FastAPI Cheatsheet](https://app-generator.dev/docs/technologies/fastapi/cheatsheet.html)   
 - [Rocket eCommerce](https://app-generator.dev/product/rocket-ecommerce/django/) - **PRO Version**
   - ✅ Stripe Integration
   - ✅ Checkout, Discounts Page
@@ -115,7 +118,7 @@ Production-ready eCommerce CMS integrated with Stripe, Analytics, Discounts Page
 | ✅ | Discounts Page | YES |
 | ✅ | Products Import | Stripe |
 | ✅ | Products Local Customization | YES |
-| ✅ | Analitycs | Weekly, Monthly, Year `Sales` |
+| ✅ | Analytics | Weekly, Monthly, Year `Sales` |
 | ✅ | Transactions Tracking | YES |
 | ✅ | Docker | YES |
 | ✅ | CI/CD | Render |
@@ -125,5 +128,5 @@ Production-ready eCommerce CMS integrated with Stripe, Analytics, Discounts Page
 <br />
 
 ---
-FastAPI & Stripe `Mini eCommerce` - Open-source eCommerce Starter provided by [App-Generator](https://app-generator.dev/).
+[FastAPI](https://app-generator.dev/docs/technologies/fastapi/index.html) & Stripe `Mini eCommerce` - Open-source eCommerce Starter provided by [App-Generator](https://app-generator.dev/).
 
